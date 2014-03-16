@@ -1,93 +1,302 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <link rel="stylesheet" href="stylesheets/stylesheet - Copy.css" media="screen"/>
+  
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   
-  <title>The Life and Times of Maurice Woods III</title>
-  <meta name="description" content="">
-
+  <title>Maurice</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
 </head>
 
 <body>
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title">The Life and Times of Maurice Woods III</h1>
-    </header>
-    <div id="container">
-      <p class="tagline"></p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/mowoodsiii/portfolio/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/mowoodsiii/portfolio/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/mowoodsiii/portfolio" class="code">View The Life and Times of Maurice Woods III on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>Let's make a portfolio!</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </article>
-      </div>
-    </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/mowoodsiii" class="avatar"><img src="https://0.gravatar.com/avatar/e9aa208675b99466d0e69a789608cd2e?d=https%3A%2F%2Fidenticons.github.com%2F73f98bbdc7a234080045dba9b96d3371.png&amp;r=x&amp;s=60" width="48" height="48"/></a> <a href="https://github.com/mowoodsiii">mowoodsiii</a> maintains <a href="https://github.com/mowoodsiii/portfolio">The Life and Times of Maurice Woods III</a></p>
-
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/mowoodsiii/portfolio/tarball/master" class="tar">tar</a><a href="https://github.com/mowoodsiii/portfolio/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
-
-  
 </body>
+
+<script>
+  var solarSystem = d3.select('body');
+  var width = window.innerWidth,
+    height = window.innerHeight,
+    radius = Math.min(width, height);
+	
+var radii = {
+  "sun": radius * 0.125,
+  "mercury": radius * 0.005,
+  "venus": radius * 0.01,
+  "earth": radius * 0.01,
+  "moon": radius * 0.0025,  
+  "mars": radius * 0.008,
+  "jupiter": radius * 0.055,
+  "saturn": radius * 0.048,
+  "uranus": radius * 0.038,
+  "neptune": radius * 0.037,
+  "mercuryOrbit": radius * 0.15,
+  "venusOrbit": radius * 0.17,
+  "earthOrbit": radius * 0.205,
+  "moonOrbit": radius * 0.02,
+  "marsOrbit": radius * 0.245,
+  "asteroidBeltOrbit": radius * 0.31,
+  "jupiterOrbit": radius * 0.4,
+  "saturnOrbit": radius * 0.575,
+  "uranusOrbit": radius * 0.75,
+  "neptuneOrbit": radius * 0.9
+};
+	
+var svg = solarSystem.append("svg")
+  .attr("width", width)
+  .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+//Orbit Positions
+	var mercuryOrbitPosition = d3.svg.arc()
+	  .outerRadius(radii.mercuryOrbit + 1)
+	  .innerRadius(radii.mercuryOrbit - 1)
+	  .startAngle(0)
+	  .endAngle(0);
+	var venusOrbitPosition = d3.svg.arc()
+	  .outerRadius(radii.venusOrbit + 1)
+	  .innerRadius(radii.venusOrbit - 1)
+	  .startAngle(0)
+	  .endAngle(0);
+	var earthOrbitPosition = d3.svg.arc()
+	  .outerRadius(radii.earthOrbit + 1)
+	  .innerRadius(radii.earthOrbit - 1)
+	  .startAngle(0)
+	  .endAngle(0);
+	var moonOrbitPosition = d3.svg.arc()
+	  .outerRadius(radii.moonOrbit + 1)
+	  .innerRadius(radii.moonOrbit - 1)
+	  .startAngle(0)
+	var marsOrbitPosition = d3.svg.arc()
+	  .outerRadius(radii.marsOrbit + 1)
+	  .innerRadius(radii.marsOrbit - 1)
+	  .startAngle(0)
+	  .endAngle(0);
+	var jupiterOrbitPosition = d3.svg.arc()
+	  .outerRadius(radii.jupiterOrbit + 1)
+	  .innerRadius(radii.jupiterOrbit - 1)
+	  .startAngle(0)
+	  .endAngle(0);
+	var saturnOrbitPosition = d3.svg.arc()
+	  .outerRadius(radii.saturnOrbit + 1)
+	  .innerRadius(radii.saturnOrbit - 1)
+	  .startAngle(0)
+	  .endAngle(0);
+	var uranusOrbitPosition = d3.svg.arc()
+	  .outerRadius(radii.uranusOrbit + 1)
+	  .innerRadius(radii.uranusOrbit - 1)
+	  .startAngle(0)
+	  .endAngle(0);
+	var neptuneOrbitPosition = d3.svg.arc()
+	  .outerRadius(radii.neptuneOrbit + 1)
+	  .innerRadius(radii.neptuneOrbit - 1)
+	  .startAngle(0)
+	  .endAngle(0);
+
+// Planet Orbit Rings
+	// Mercury's orbit
+	svg.append("circle")
+	  .attr("class", "mercuryOrbit")
+	  .attr("r", radii.mercuryOrbit)
+	  .style("fill", "none")
+	  .style("stroke", "rgba(255, 204, 0, 0.25)"); 
+	// Venus' orbit
+	svg.append("circle")
+	  .attr("class", "venusOrbit")
+	  .attr("r", radii.venusOrbit)
+	  .style("fill", "none")
+	  .style("stroke", "rgba(255, 204, 0, 0.25)"); 
+	// Earth's orbit
+	svg.append("circle")
+	  .attr("class", "earthOrbit")
+	  .attr("r", radii.earthOrbit)
+	  .style("fill", "none")
+	  .style("stroke", "rgba(255, 204, 0, 0.25)"); 
+	// Moon's orbit
+	svg.append("circle")
+	  .attr("class", "moonOrbit")
+	  .attr("r", radii.moonOrbit)
+	  .attr("transform", "translate(0," + -radii.earthOrbit + ")")
+	  .style("fill", "none")
+	  .style("stroke", "rgba(113, 170, 255, 0.25)");
+	// Mars' orbit
+	svg.append("circle")
+	  .attr("class", "marsOrbit")
+	  .attr("r", radii.marsOrbit)
+	  .style("fill", "none")
+	  .style("stroke", "rgba(255, 204, 0, 0.25)");
+	// Jupiter's orbit
+	svg.append("circle")
+	  .attr("class", "jupiterOrbit")
+	  .attr("r", radii.jupiterOrbit)
+	  .style("fill", "none")
+	  .style("stroke", "rgba(255, 204, 0, 0.25)");
+	// Saturn's orbit
+	svg.append("circle")
+	  .attr("class", "saturnOrbit")
+	  .attr("r", radii.saturnOrbit)
+	  .style("fill", "none")
+	  .style("stroke", "rgba(255, 204, 0, 0.25)");
+	// Uranus' orbit
+	svg.append("circle")
+	  .attr("class", "uranusOrbit")
+	  .attr("r", radii.uranusOrbit)
+	  .style("fill", "none")
+	  .style("stroke", "rgba(255, 204, 0, 0.25)");
+	// Neptune's orbit
+	svg.append("circle")
+	  .attr("class", "neptuneOrbit")
+	  .attr("r", radii.neptuneOrbit)
+	  .style("fill", "none")
+	  .style("stroke", "rgba(255, 204, 0, 0.25)");
+
+
+//Orbit Progress Ring Segments
+	// Current position of the Earth in its orbit
+	svg.append("path")
+	  .attr("class", "earthOrbitPosition")
+	  .attr("d", earthOrbitPosition)
+	  .style("fill", "rgba(255, 204, 0, 0.75)");
+	// Current position of the Moon in its orbit
+	var moonOrbitPosition = d3.svg.arc()
+	  .outerRadius(radii.moonOrbit + 1)
+	  .innerRadius(radii.moonOrbit - 1)
+	  .startAngle(0)
+	  .endAngle(0);
+	svg.append("path")
+	  .attr("class", "moonOrbitPosition")
+	  .attr("d", moonOrbitPosition)
+	  .attr("transform", "translate(0," + -radii.earthOrbit + ")")
+	  .style("fill", "rgba(113, 170, 255, 0.75)");
+
+//Planets
+	// Sun Body
+	svg.append("circle")
+	  .attr("class", "sun")
+	  .attr("r", radii.sun)
+	  .style("fill", "rgba(255, 204, 0, 1.0)");
+	// Mercury Planet
+	svg.append("circle")
+	  .attr("class", "mercury")
+	  .attr("r", radii.mercury)
+	  .attr("transform", "translate(0," + -radii.mercuryOrbit + ")")
+	  .style("fill", "rgba(91, 91, 70, 1.0)");
+	// Venus Planet
+	svg.append("circle")
+	  .attr("class", "venus")
+	  .attr("r", radii.venus)
+	  .attr("transform", "translate(0," + -radii.venusOrbit + ")")
+	  .style("fill", "rgba(204, 153, 0, 1.0)");
+	// Earth Planet
+	svg.append("circle")
+	  .attr("class", "earth")
+	  .attr("r", radii.earth)
+	  .attr("transform", "translate(0," + -radii.earthOrbit + ")")
+	  .style("fill", "rgba(113, 170, 255, 1.0)");
+	// Moon Body
+	svg.append("circle")
+	  .attr("class", "moon")
+	  .attr("r", radii.moon)
+	  .attr("transform", "translate(0," + (-radii.earthOrbit + -radii.moonOrbit) + ")")
+	  .style("fill", "rgba(150, 150, 150, 1.0)");
+	// Mars Planet
+	svg.append("circle")
+	  .attr("class", "mars")
+	  .attr("r", radii.mars)
+	  .attr("transform", "translate(0," + -radii.marsOrbit + ")")
+	  .style("fill", "rgba(190, 0, 0, 1.0)");
+	// Asteroid Belt's orbit
+	svg.append("circle")
+	  .attr("class", "asteroidBeltOrbit")
+	  .attr("r", radii.asteroidBeltOrbit)
+	  .style("fill", "none")
+	  .style("stroke", "rgba(149, 131, 114, 0.2)")
+	  .style("stroke-width", "10pt");
+	// Jupiter Planet
+	svg.append("circle")
+	  .attr("class", "jupiter")
+	  .attr("r", radii.jupiter)
+	  .attr("transform", "translate(0," + -radii.jupiterOrbit + ")")
+	  .style("fill", "rgba(255, 159, 95, 1.0)");
+	// Saturn Planet
+	svg.append("circle")
+	  .attr("class", "saturn")
+	  .attr("r", radii.saturn)
+	  .attr("transform", "translate(0," + -radii.saturnOrbit + ")")
+	  .style("fill", "rgba(230, 204, 128, 1.0)");
+	// Saturn's Rings
+	svg.append("circle")
+	  .attr("class", "saturnRings")
+	  .attr("r", radii.saturn * 1.5)
+	  .attr("transform", "translate(0," + -radii.saturnOrbit + ")")
+	  .style("fill", "none")
+	  .style("stroke", "rgba(178, 178, 178, 0.35)")
+	  .style("stroke-width", "10pt");
+	// Uranus Planet
+	svg.append("circle")
+	  .attr("class", "uranus")
+	  .attr("r", radii.uranus)
+	  .attr("transform", "translate(0," + -radii.uranusOrbit + ")")
+	  .style("fill", "rgba(150, 232, 191, 1.0)");
+	// Neptune Planet
+	svg.append("circle")
+	  .attr("class", "neptune")
+	  .attr("r", radii.neptune)
+	  .attr("transform", "translate(0," + -radii.neptuneOrbit + ")")
+	  .style("fill", "rgba(113, 170, 255, 1.0)");
+
+// Interpolate Positions
+	var interpolateMercuryOrbitPosition = d3.interpolate(mercuryOrbitPosition.endAngle()(), (2 * Math.PI));
+	var interpolateVenusOrbitPosition = d3.interpolate(venusOrbitPosition.endAngle()(), (2 * Math.PI));
+	var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI));
+	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (20 * Math.PI));
+	var interpolateMarsOrbitPosition = d3.interpolate(marsOrbitPosition.endAngle()(), (2 * Math.PI));
+	var interpolateJupiterOrbitPosition = d3.interpolate(jupiterOrbitPosition.endAngle()(), (2 * Math.PI));
+	var interpolateSaturnOrbitPosition = d3.interpolate(saturnOrbitPosition.endAngle()(), (2 * Math.PI));
+	var interpolateUranusOrbitPosition = d3.interpolate(uranusOrbitPosition.endAngle()(), (2 * Math.PI));
+	var interpolateNeptuneOrbitPosition = d3.interpolate(neptuneOrbitPosition.endAngle()(), (2 * Math.PI));
+
+// Animate Orbits
+	/*d3.select(".earth")
+	  .transition()
+	  .attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")")
+	    .duration(2000);*/
+
+
+	window.onload = function(t) {
+  d3.select("earth").transition().attr("r",320);
+}
+
+
+	/*d3.transition().tween("orbit", function () {
+	    return function (t) {
+	      // Animate Earth orbit position
+	      d3.select(".earthOrbitPosition")
+		.attr("d", earthOrbitPosition.endAngle(interpolateEarthOrbitPosition(t)))
+	      // Animate Earth Planet position
+	      d3.select(".earth")
+		.attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")")
+	      // Transition Moon orbit
+	      d3.select(".moonOrbit")
+		.attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
+	      // Transition Moon orbit position
+	      d3.select(".moonOrbitPosition")
+		.attr("d", moonOrbitPosition.endAngle(interpolateMoonOrbitPosition(t)))
+		.attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
+	      // Transition Moon
+	      d3.select(".moon")
+		.attr("transform", "translate(" + (radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + radii.moonOrbit * Math.sin(interpolateMoonOrbitPosition(t) - moonOrbitPosition.startAngle()())) + "," + (-radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + -radii.moonOrbit * Math.cos(interpolateMoonOrbitPosition(t) - moonOrbitPosition.startAngle()())) + ")");
+	    }
+	})
+	.duration(10000)
+	.ease("linear");*/
+
+  </script>
 </html>
