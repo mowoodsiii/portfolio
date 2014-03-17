@@ -29,6 +29,7 @@ var radii = {
 };
 	
 var svg = solarSystem.append("svg")
+  .attr("id", "planetarium")
   .attr("width", width)
   .attr("height", height)
   .append("g")
