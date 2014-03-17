@@ -17,9 +17,9 @@ body
 
 h1
 {
-  letter-spacing: 5px;
+  letter-spacing: 8px;
   text-align:     center;
-  font-size:      24pt;
+  font-size:      26pt;
   color:          #111;
 }
 
@@ -42,6 +42,8 @@ navbar > a:hover
 {
   color: #777;
 }
+
+
 
 /* Sections */
 svg#planetarium
@@ -78,15 +80,45 @@ navbar#side
   height:   100%;
 }
 
-#contentStrip
+.strip
 {
   display:           block;
-  overflow-x:        hidden;
-  overflow-y:        scroll;
   position:          relative;
   margin:            0px auto;
   width:             600px;
   height:            100%;
+}
+
+.bubble
+{
+  width:             280px;
+  border-radius:     140px;
+}
+
+a.bubble
+{
+  height: 280px;
+  display: block;
+}
+
+img.bubble
+{
+  -webkit-transition: width .3s, padding .3s;
+  transition:         width .3s, padding .3s;
+  -webkit-animation:  fadeBubble 2s ease;
+  animation:          fadeBubble 2s ease;
+}
+
+img.bubble:hover
+{
+  padding:15px 0px 0px 15px;
+  width:250px;
+}
+
+#content
+{
+  overflow-x:        hidden;
+  overflow-y:        scroll;
   background:        rgb(54, 25, 25);
   background:        rgba(150, 150, 150, 0.6);
   -webkit-animation: openContent 2s ease;
@@ -120,6 +152,20 @@ navbar#side
 0%   {width:0px; padding-left:0px;}
 70%  {width:0px; padding-left:0px;}
 100% {width:50px; padding-left:5px;}
+}
+
+@-webkit-keyframes fadeBubble
+{
+0%   {opacity:0;}
+30%  {opacity:0;}
+100% {opacity:1;}
+}
+
+@keyframes fadeBubble
+{
+0%   {opacity:0;}
+30%  {opacity:0;}
+100% {opacity:1;}
 }
 
 /* Other */
