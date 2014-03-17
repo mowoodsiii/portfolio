@@ -1,4 +1,4 @@
-function planetarium(){
+function planetarium(t){
 
 var solarSystem = d3.select('body');
 var width = window.innerWidth,
@@ -250,7 +250,7 @@ var svg = solarSystem.append("svg")
 	  .attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")")
 	    .duration(2000);*/
 
-	/*d3.transition().tween("orbit", function () {
+	d3.transition().tween("orbit", function () {
 	    return function (t) {
 	      // Animate Earth orbit position
 	      d3.select(".earthOrbitPosition")
@@ -271,5 +271,5 @@ var svg = solarSystem.append("svg")
 	    }
 	})
 	.duration(10000)
-	.ease("linear");*/
+	.ease("linear");
 }
