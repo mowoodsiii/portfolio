@@ -55,6 +55,7 @@ var svg = solarSystem.append("svg")
 	  .outerRadius(radii.moonOrbit + 1)
 	  .innerRadius(radii.moonOrbit - 1)
 	  .startAngle(0)
+	  .endAngle(0);
 	var marsOrbitPosition = d3.svg.arc()
 	  .outerRadius(radii.marsOrbit + 1)
 	  .innerRadius(radii.marsOrbit - 1)
@@ -146,11 +147,6 @@ var svg = solarSystem.append("svg")
 	  .attr("d", earthOrbitPosition)
 	  .style("fill", "rgba(255, 204, 0, 0.75)");
 	// Current position of the Moon in its orbit
-	var moonOrbitPosition = d3.svg.arc()
-	  .outerRadius(radii.moonOrbit + 1)
-	  .innerRadius(radii.moonOrbit - 1)
-	  .startAngle(0)
-	  .endAngle(0);
 	svg.append("path")
 	  .attr("class", "moonOrbitPosition")
 	  .attr("d", moonOrbitPosition)
@@ -179,7 +175,7 @@ var svg = solarSystem.append("svg")
 	svg.append("circle")
 	  .attr("class", "earth")
 	  .attr("r", radii.earth)
-	  .attr("transform", "translate(0," + -radii.earthOrbit + ")")
+	  .attr("transform", "translate(0," + -radii.earthOrbit + ")") //call movement functions here? MIW
 	  .style("fill", "rgba(113, 170, 255, 1.0)");
 	// Moon Body
 	svg.append("circle")
@@ -237,7 +233,7 @@ var svg = solarSystem.append("svg")
 	var interpolateMercuryOrbitPosition = d3.interpolate(mercuryOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateVenusOrbitPosition = d3.interpolate(venusOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI));
-	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (20 * Math.PI));
+	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateMarsOrbitPosition = d3.interpolate(marsOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateJupiterOrbitPosition = d3.interpolate(jupiterOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateSaturnOrbitPosition = d3.interpolate(saturnOrbitPosition.endAngle()(), (2 * Math.PI));

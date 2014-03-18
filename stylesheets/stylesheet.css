@@ -85,24 +85,28 @@ navbar#side
   display:           block;
   position:          relative;
   margin:            0px auto;
-  width:             600px;
+  width:             250px;
+  min-width:         50%;
+  max-width:         600px;
   height:            100%;
 }
 
 .bubble
 {
-  width:             280px;
+  width:             40%;
+  max-width:         280px;
   border-radius:     140px;
+  overflow:          hidden;
 }
 
 a.bubble
 {
-  height: 280px;
   display: block;
 }
 
 img.bubble
 {
+  width:100%;
   -webkit-transition: width .3s, padding .3s;
   transition:         width .3s, padding .3s;
   -webkit-animation:  fadeBubble 2s ease;
@@ -111,8 +115,8 @@ img.bubble
 
 img.bubble:hover
 {
-  padding:15px 0px 0px 15px;
-  width:250px;
+  padding:5% 0px 5% 5%;
+  width:90%;
 }
 
 #content
