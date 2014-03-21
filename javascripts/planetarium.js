@@ -88,19 +88,19 @@ var svg = solarSystem.append("svg")
 	  .attr("class", "mercuryOrbit")
 	  .attr("r", radii.mercuryOrbit)
 	  .style("fill", "none")
-	  .style("stroke", "rgba(255, 204, 0, 0.25)"); 
+	  .style("stroke", "rgba(150, 150, 150, 0.25)"); 
 	// Venus' orbit
 	svg.append("circle")
 	  .attr("class", "venusOrbit")
 	  .attr("r", radii.venusOrbit)
 	  .style("fill", "none")
-	  .style("stroke", "rgba(255, 204, 0, 0.25)"); 
+	  .style("stroke", "rgba(150, 150, 150, 0.25)"); 
 	// Earth's orbit
 	svg.append("circle")
 	  .attr("class", "earthOrbit")
 	  .attr("r", radii.earthOrbit)
 	  .style("fill", "none")
-	  .style("stroke", "rgba(255, 204, 0, 0.25)"); 
+	  .style("stroke", "rgba(150, 150, 150, 0.25)"); 
 	// Moon's orbit
 	svg.append("circle")
 	  .attr("class", "moonOrbit")
@@ -113,45 +113,79 @@ var svg = solarSystem.append("svg")
 	  .attr("class", "marsOrbit")
 	  .attr("r", radii.marsOrbit)
 	  .style("fill", "none")
-	  .style("stroke", "rgba(255, 204, 0, 0.25)");
+	  .style("stroke", "rgba(150, 150, 150, 0.25)");
 	// Jupiter's orbit
 	svg.append("circle")
 	  .attr("class", "jupiterOrbit")
 	  .attr("r", radii.jupiterOrbit)
 	  .style("fill", "none")
-	  .style("stroke", "rgba(255, 204, 0, 0.25)");
+	  .style("stroke", "rgba(150, 150, 150, 0.25)");
 	// Saturn's orbit
 	svg.append("circle")
 	  .attr("class", "saturnOrbit")
 	  .attr("r", radii.saturnOrbit)
 	  .style("fill", "none")
-	  .style("stroke", "rgba(255, 204, 0, 0.25)");
+	  .style("stroke", "rgba(150, 150, 150, 0.25)");
 	// Uranus' orbit
 	svg.append("circle")
 	  .attr("class", "uranusOrbit")
 	  .attr("r", radii.uranusOrbit)
 	  .style("fill", "none")
-	  .style("stroke", "rgba(255, 204, 0, 0.25)");
+	  .style("stroke", "rgba(150, 150, 150, 0.25)");
 	// Neptune's orbit
 	svg.append("circle")
 	  .attr("class", "neptuneOrbit")
 	  .attr("r", radii.neptuneOrbit)
 	  .style("fill", "none")
-	  .style("stroke", "rgba(255, 204, 0, 0.25)");
-
+	  .style("stroke", "rgba(150, 150, 150, 0.25)");
 
 //Orbit Progress Ring Segments
+	// Current position of the Mercury in its orbit
+	svg.append("path")
+	  .attr("class", "mercuryOrbitPosition")
+	  .attr("d", mercuryOrbitPosition)
+	  .style("fill", "rgba(91, 91, 70, 0.35)");
+	// Current position of the Venus in its orbit
+	svg.append("path")
+	  .attr("class", "venusOrbitPosition")
+	  .attr("d", venusOrbitPosition)
+	  .style("fill", "rgba(204, 153, 0, 0.35)");
 	// Current position of the Earth in its orbit
 	svg.append("path")
 	  .attr("class", "earthOrbitPosition")
 	  .attr("d", earthOrbitPosition)
-	  .style("fill", "rgba(255, 204, 0, 0.75)");
+	  .style("fill", "rgba(113, 170, 255, 0.35)");
 	// Current position of the Moon in its orbit
 	svg.append("path")
 	  .attr("class", "moonOrbitPosition")
 	  .attr("d", moonOrbitPosition)
 	  .attr("transform", "translate(0," + -radii.earthOrbit + ")")
-	  .style("fill", "rgba(113, 170, 255, 0.75)");
+	  .style("fill", "rgba(150, 150, 150, 0.35)");
+	// Current position of the Mars in its orbit
+	svg.append("path")
+	  .attr("class", "marsOrbitPosition")
+	  .attr("d", marsOrbitPosition)
+	  .style("fill", "rgba(190, 0, 0, 0.35)");
+	// Current position of the Jupiter in its orbit
+	svg.append("path")
+	  .attr("class", "jupiterOrbitPosition")
+	  .attr("d", jupiterOrbitPosition)
+	  .style("fill", "rgba(255, 159, 95, 0.35)");
+	// Current position of the Saturn in its orbit
+	svg.append("path")
+	  .attr("class", "saturnOrbitPosition")
+	  .attr("d", saturnOrbitPosition)
+	  .style("fill", "rgba(230, 204, 128, 0.35)");
+	// Current position of the Uranus in its orbit
+	svg.append("path")
+	  .attr("class", "uranusOrbitPosition")
+	  .attr("d", uranusOrbitPosition)
+	  .style("fill", "rgba(150, 232, 191, 0.35)");
+	// Current position of the Neptune in its orbit
+	svg.append("path")
+	  .attr("class", "neptuneOrbitPosition")
+	  .attr("d", neptuneOrbitPosition)
+	  .style("fill", "rgba(113, 170, 255, 0.35)");
 
 //Planets
 	// Sun Body
@@ -233,7 +267,7 @@ var svg = solarSystem.append("svg")
 	var interpolateMercuryOrbitPosition = d3.interpolate(mercuryOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateVenusOrbitPosition = d3.interpolate(venusOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI));
-	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (2 * Math.PI));
+	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (10 * Math.PI));
 	var interpolateMarsOrbitPosition = d3.interpolate(marsOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateJupiterOrbitPosition = d3.interpolate(jupiterOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateSaturnOrbitPosition = d3.interpolate(saturnOrbitPosition.endAngle()(), (2 * Math.PI));
@@ -248,12 +282,18 @@ var svg = solarSystem.append("svg")
 
 	d3.transition().tween("orbit", function () {
 	    return function (t) {
-	      // Animate Earth orbit position
+	      // Animate Venus orbit position
+	      d3.select(".venusOrbitPosition")
+		.attr("d", venusOrbitPosition.endAngle(interpolateVenusOrbitPosition(t)));
+	      // Animate Venus Planet position
+	      d3.select(".venus")
+		.attr("transform", "translate(" + radii.venusOrbit * Math.sin(interpolateVenusOrbitPosition(t) - venusOrbitPosition.startAngle()()) + "," + -radii.venusOrbit * Math.cos(interpolateVenusOrbitPosition(t) - venusOrbitPosition.startAngle()()) + ")");
+		// Animate Earth orbit position
 	      d3.select(".earthOrbitPosition")
-		.attr("d", earthOrbitPosition.endAngle(interpolateEarthOrbitPosition(t)))
+		.attr("d", earthOrbitPosition.endAngle(interpolateEarthOrbitPosition(t)));
 	      // Animate Earth Planet position
 	      d3.select(".earth")
-		.attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")")
+		.attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
 	      // Transition Moon orbit
 	      d3.select(".moonOrbit")
 		.attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")");
