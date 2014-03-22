@@ -65,7 +65,7 @@ d3.csv("./data/stars.csv", function(data) {
   for (i=0; i<length; i++)
   {
     randomr = Math.floor(Math.random() * (4 - 2 + 1)) + 2;
-    letter.append('circle').attr('class','namestar').attr('cx',dataset[i][0]).attr('cy',dataset[i][1]).attr('r',randomr).style('fill','#f00');
+    letter.append('circle').attr('class','namestar').attr('cx',dataset[i][0]).attr('cy',dataset[i][1]).attr('r',randomr);
   }
 });
 
