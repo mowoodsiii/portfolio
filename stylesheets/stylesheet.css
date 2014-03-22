@@ -85,12 +85,85 @@ navbar#side
   display:           block;
   position:          relative;
   margin:            0px auto;
-  width:             250px;
-  min-width:         50%;
+  width:             50%;
+  min-width:         250px;
   max-width:         600px;
   height:            100%;
 }
 
+
+#content
+{
+  overflow-x:        hidden;
+  overflow-y:        scroll;
+  background:        rgb(54, 25, 25);
+  background:        rgba(150, 150, 150, 0.6);
+  -webkit-animation: openContent 2s ease;
+  animation:         openContent 2s ease;
+}
+
+/* Animations */
+@-webkit-keyframes openContent
+{
+0%   {width:0px; min-width:0px; opacity:0.2;}
+40%  {width:0px; min-width:0px; opacity:0.2;}
+100% {width:600px; min-width:250px; opacity:1;}
+}
+
+@keyframes openContent
+{
+0%   {width:0px; min-width:0px; opacity:0.2;}
+40%  {width:0px; min-width:0px; opacity:0.2;}
+100% {width:600px; min-width:250px; opacity:1;}
+}
+
+@-webkit-keyframes openNav
+{
+0%   {width:0px; padding-left:0px;}
+70%  {width:0px; padding-left:0px;}
+100% {width:50px; padding-left:5px;}
+}
+
+@keyframes openNav
+{
+0%   {width:0px; padding-left:0px;}
+70%  {width:0px; padding-left:0px;}
+100% {width:50px; padding-left:5px;}
+}
+
+/* Other */
+::-webkit-scrollbar {
+  width: 4px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  border-radius:      10px;
+  background-color:   rgba(30,30,30,0.8);
+}
+
+/* SVG Styles */
+path.constellation, path.constellationFill
+{
+  fill: rgba(220,220,220,0.2);
+}
+
+path.constellation, path.constellationLines
+{
+  stroke:       #aaa;
+  stroke-width: 1px;
+}
+
+path.constellationLines
+{
+  fill-opacity: 0.0;
+}
+
+circle.namestar
+{
+  fill: #bbb;
+}
+
+/* Old Trash
 .bubble
 {
   width:             40%;
@@ -119,45 +192,6 @@ img.bubble:hover
   width:90%;
 }
 
-#content
-{
-  overflow-x:        hidden;
-  overflow-y:        scroll;
-  background:        rgb(54, 25, 25);
-  background:        rgba(150, 150, 150, 0.6);
-  -webkit-animation: openContent 2s ease;
-  animation:         openContent 2s ease;
-}
-
-/* Animations */
-@-webkit-keyframes openContent
-{
-0%   {width:0px; opacity:0.2;}
-40%  {width:0px; opacity:0.2;}
-100% {width:600px; opacity:1;}
-}
-
-@keyframes openContent
-{
-0%   {width:0px; opacity:0.2;}
-40%  {width:0px; opacity:0.2;}
-100% {width:600px; opacity:1;}
-}
-
-@-webkit-keyframes openNav
-{
-0%   {width:0px; padding-left:0px;}
-70%  {width:0px; padding-left:0px;}
-100% {width:50px; padding-left:5px;}
-}
-
-@keyframes openNav
-{
-0%   {width:0px; padding-left:0px;}
-70%  {width:0px; padding-left:0px;}
-100% {width:50px; padding-left:5px;}
-}
-
 @-webkit-keyframes fadeBubble
 {
 0%   {opacity:0;}
@@ -171,13 +205,4 @@ img.bubble:hover
 30%  {opacity:0;}
 100% {opacity:1;}
 }
-
-/* Other */
-::-webkit-scrollbar {
-  width: 4px;
-}
- 
-::-webkit-scrollbar-thumb {
-  border-radius:      10px;
-  background-color:   rgba(30,30,30,0.8);
-}
+*/

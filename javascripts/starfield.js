@@ -1,22 +1,80 @@
-function starfield() {
+function starfield()
+{
   var width = window.innerWidth,
 	height = window.innerHeight,
 	starcount = (width * height)/10000,
 	randomx = 0,
 	randomy = 0,
 	randomr = 0;
-	d3.select('body').append('svg').attr('width',width).attr('height',height).attr('id', 'stars').style('position','fixed').style('z-index','-3');
-	console.log(width);
-	console.log(height);
-	console.log(starcount);
+
+d3.select('body').append('svg').attr('width',width).attr('height',height).attr('id', 'starfield').style('position','fixed').style('z-index','-3').append('g').attr('id','stars');
 
   for (counter = 0; counter < starcount; counter++)
   {
 	randomx = Math.random () * width;
 	randomy = Math.random () * height;
 	randomr = Math.floor(Math.random() * (3 - 1 + 1)) + 1;;
-	d3.select('#stars').append('circle').attr('cx', randomx).attr('cy', randomy).attr('r', randomr).style('fill','#bbb');
-   }
-   
+	d3.select('#stars')
+          .append('circle')
+          .attr('class','star')
+          .attr('cx', randomx)
+          .attr('cy', randomy)
+          .attr('r', randomr)
+          .style('fill','#bbb');
+  }
+d3.select('#starfield')
+  .append('g')
+    .attr('id','name')
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+var letter = d3.select('#name');
+
+//First Name Constellation Lines and Fill
+/*M*/letter.append('path').attr('class','constellation').attr('d','m-300 -10 l0 -100 l50 100 l50 -100 l0 100').attr('id','M');
+
+/*A*/letter.append('path').attr('class','constellation').attr('d','m-190 -10 l45 -100 l45 100').attr('id','A');
+
+/*U*/letter.append('path').attr('class','constellation').attr('d','m-90 -110 l0 100 l80 0 l0 -100').attr('id','U');
+
+/*R*/letter.append('path').attr('class','constellation').attr('d','m10 -10 l0 -100 l40 0 l30 30 l-30 30 l-40 0 l70 40').attr('id','R');
+
+/*I*/letter.append('path').attr('class','constellationLines').attr('d','m100 -110 l20 0 l-10 0 l0 100 l10 0 l-20 0').attr('id','I');
+letter.append('path').attr('class','constellationFill').attr('d','m100 -110 l10 100 l10 -100');
+
+/*C*/letter.append('path').attr('class','constellation').attr('d','m210 -110 l-80 50 l80 50').attr('id','C');
+
+/*E*/letter.append('path').attr('class','constellationLines').attr('d','m300 -110 l-70 0 l0 50 l40 0 l-40 0 l0 50 l70 0').attr('id','E');
+letter.append('path').attr('class','constellationFill').attr('d','m300 -110 l-70 0 l0 100 l70 0 l-70 -50 l70 -50');
+ 
+//Last Name Constellation Lines and Fill
+/*W*/letter.append('path').attr('class','constellation').attr('d','m-280 10 l0 100 l50 -50 l50 50 l0 -100').attr('id','W');
+
+/*O*/letter.append('path').attr('class','constellation').attr('d','m-115 10 l50 20 l0 60 l-50 20 l-50 -20 l0 -60 l50 -20').attr('id','O1');
+
+/*O*/letter.append('path').attr('class','constellation').attr('d','m0 10 l50 20 l0 60 l-50 20 l-50 -20 l0 -60 l50 -20').attr('id','O2');
+
+/*D*/letter.append('path').attr('class','constellation').attr('d','m65 10 l0 100 l60 0 l40 -50 l-40 -50 l-60 0').attr('id','D');
+
+/*S*/letter.append('path').attr('class','constellation').attr('d','m245 10 l-70 25 l100 50 l-70 25').attr('id','S');
+
+//Letter Stars
+/*
+d3.csv("./data/stars.csv", function(d) {
+  return {
+    x: +d.x, //convert "x" to a number
+    y: +d.y, 
+    r: +d.r
+  };
+}, function(error, rows) {
+  console.log(rows);
+});
+*/
+var dataset = []
+d3.csv("../data/stars.csv", function(data) {
+   dataset = data.map(function(d) { return [ +d["x"], +d["y"], +d["r"] ]; });
+   console.log(dataset)
+});
+
+letter.append('circle').attr('class','namestar').attr('cx','').attr('cy','').attr('r','');
+
    //inspiration from https://www.dropbox.com/s/1cy0aiybljoyu8l/Screenshot%202014-03-20%2022.12.16.png
 }
