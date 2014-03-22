@@ -123,9 +123,11 @@ path.constellationLines
   animation:         constellationLines 3s ease;
 }
 
-circle.namestar
+circle.namestar, circle.star
 {
   fill: #bbb;
+  -webkit-animation: namestar 3s ease;
+  animation:         namestar 3s ease;
 }
 
 /* Animations */
@@ -183,6 +185,20 @@ circle.namestar
 0%   {stroke-opacity:0;}
 70%  {stroke-opacity:0;}
 100% {stroke-opacity:1;}
+}
+
+@-webkit-keyframes namestar
+{
+0%   {fill-opacity:0;}
+30%  {fill-opacity:0;}
+100% {fill-opacity:1;}
+}
+
+@keyframes namestar
+{
+0%   {fill-opacity:0;}
+30%  {fill-opacity:0;}
+100% {fill-opacity:1;}
 }
 
 /* Other */
