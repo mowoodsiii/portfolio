@@ -69,7 +69,7 @@ d3.csv("./data/stars.csv", function(d) {
 });
 */
 var dataset = []
-d3.csv("../data/stars.csv", function(data) {
+d3.csv("./data/stars.csv", function(data) {
    dataset = data.map(function(d) { return [ +d["x"], +d["y"], +d["r"] ]; });
    console.log(dataset)
 });
