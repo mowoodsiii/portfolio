@@ -46,7 +46,8 @@ letter.append('path').attr('class','constellationFill').attr('d','m100 -110 l10 
 letter.append('path').attr('class','constellationFill').attr('d','m300 -110 l-70 0 l0 100 l70 0 l-70 -50 l70 -50');
  
 //Last Name Constellation Lines and Fill
-/*W*/letter.append('path').attr('class','constellation').attr('d','m-280 10 l0 100 l50 -50 l50 50 l0 -100').attr('id','W');
+/*W*/letter.append('path').attr('class','constellationLines').attr('d','m-280 10 l0 100 l50 -50 l50 50 l0 -100').attr('id','W');
+letter.append('path').attr('class','constellationFill').attr('d','m-280 10 l0 100 l50 -50 l50 50 l0 -100 l-50 50');
 
 /*O*/letter.append('path').attr('class','constellation').attr('d','m-115 10 l50 20 l0 60 l-50 20 l-50 -20 l0 -60 l50 -20').attr('id','O1');
 
@@ -57,21 +58,11 @@ letter.append('path').attr('class','constellationFill').attr('d','m300 -110 l-70
 /*S*/letter.append('path').attr('class','constellation').attr('d','m245 10 l-70 25 l100 50 l-70 25').attr('id','S');
 
 //Letter Stars
-/*
-d3.csv("./data/stars.csv", function(d) {
-  return {
-    x: +d.x, //convert "x" to a number
-    y: +d.y, 
-    r: +d.r
-  };
-}, function(error, rows) {
-  console.log(rows);
-});
-*/
 var dataset = []
 d3.csv("./data/stars.csv", function(data) {
    dataset = data.map(function(d) { return [ +d["x"], +d["y"], +d["r"] ]; });
-   console.log(dataset)
+   console.log(dataset);
+   console.log(dataset[0]);
 });
 
 letter.append('circle').attr('class','namestar').attr('cx','').attr('cy','').attr('r','');
