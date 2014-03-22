@@ -61,10 +61,10 @@ letter.append('path').attr('class','constellationFill').attr('d','m-280 10 l0 10
 var dataset = []
 d3.csv("./data/stars.csv", function(data) {
    dataset = data.map(function(d) { return [ +d["x"], +d["y"] ]; });
-
-  for (i=0; i<2; i++)
+   length = dataset.length
+  for (i=0; i<length; i++)
   {
-    randomr = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+    randomr = Math.floor(Math.random() * (4 - 2 + 1)) + 2;
     letter.append('circle').attr('class','namestar').attr('cx',dataset[i][0]).attr('cy',dataset[i][1]).attr('r',randomr).style('fill','#f00');
   }
 });
