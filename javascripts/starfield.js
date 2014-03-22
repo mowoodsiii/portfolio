@@ -68,6 +68,7 @@ d3.csv("./data/stars.csv", function(data) {
 
 for (i=0; i>60; i++)
 {
+  console.log("In for loop");
   letter.append('circle').attr('class','namestar').attr('cx',dataset[i][0]).attr('cy',dataset[i][1]).attr('r',dataset[i][2]);
 }
 
