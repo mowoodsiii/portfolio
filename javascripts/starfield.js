@@ -66,7 +66,10 @@ d3.csv("./data/stars.csv", function(data) {
    console.log(dataset[0][0]);
 });
 
-letter.append('circle').attr('class','namestar').attr('cx','').attr('cy','').attr('r','');
+for (i=0; i>60; i++)
+{
+  letter.append('circle').attr('class','namestar').attr('cx',dataset[i][0]).attr('cy',dataset[i][1]).attr('r',dataset[i][2]);
+}
 
    //inspiration from https://www.dropbox.com/s/1cy0aiybljoyu8l/Screenshot%202014-03-20%2022.12.16.png
 }
