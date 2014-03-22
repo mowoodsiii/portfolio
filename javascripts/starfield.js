@@ -60,15 +60,13 @@ letter.append('path').attr('class','constellationFill').attr('d','m-280 10 l0 10
 //Letter Stars
 var dataset = []
 d3.csv("./data/stars.csv", function(data) {
-   dataset = data.map(function(d) { return [ +d["x"], +d["y"], +d["r"] ]; });
+   dataset = data.map(function(d) { return [ +d["x"], +d["y"] ]; });
 
-for (i=0; i<2; i++)
-{
-  console.log("In for loop");
-  console.log(dataset[0][0]);
-  letter.append('circle').attr('class','namestar').attr('cx',dataset[i][0]).attr('cy',dataset[i][1]).attr('r',dataset[i][2]);
-}
-
+  for (i=0; i<2; i++)
+  {
+    randomr = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+    letter.append('circle').attr('class','namestar').attr('cx',dataset[i][0]).attr('cy',dataset[i][1]).attr('r',randomr);
+  }
 });
 
    //inspiration from https://www.dropbox.com/s/1cy0aiybljoyu8l/Screenshot%202014-03-20%2022.12.16.png
