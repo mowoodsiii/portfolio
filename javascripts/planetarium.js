@@ -1,5 +1,4 @@
-function planetarium(t){
-
+function planetarium(){
 var solarSystem = d3.select('body');
 var width = window.innerWidth,
   height = window.innerHeight,
@@ -262,12 +261,14 @@ var svg = solarSystem.append("svg")
 	  .attr("r", radii.neptune)
 	  .attr("transform", "translate(0," + -radii.neptuneOrbit + ")")
 	  .style("fill", "rgba(113, 170, 255, 1.0)");
-
+var i=0;
+setInterval(function(){
+i=i+1;
 // Interpolate Positions
-	var interpolateMercuryOrbitPosition = d3.interpolate(mercuryOrbitPosition.endAngle()(), (2 * Math.PI));
-	var interpolateVenusOrbitPosition = d3.interpolate(venusOrbitPosition.endAngle()(), (2 * Math.PI));
-	var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI));
-	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (10 * Math.PI));
+	var interpolateMercuryOrbitPosition = d3.interpolate(mercuryOrbitPosition.endAngle()(), (1 * Math.PI * i / 20));
+	var interpolateVenusOrbitPosition = d3.interpolate(venusOrbitPosition.endAngle()(), (2.3 * Math.PI * i / 20));
+	var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI *i / 20));
+	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (10 * Math.PI *i / 20));
 	var interpolateMarsOrbitPosition = d3.interpolate(marsOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateJupiterOrbitPosition = d3.interpolate(jupiterOrbitPosition.endAngle()(), (2 * Math.PI));
 	var interpolateSaturnOrbitPosition = d3.interpolate(saturnOrbitPosition.endAngle()(), (2 * Math.PI));
@@ -306,6 +307,7 @@ var svg = solarSystem.append("svg")
 		.attr("transform", "translate(" + (radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + radii.moonOrbit * Math.sin(interpolateMoonOrbitPosition(t) - moonOrbitPosition.startAngle()())) + "," + (-radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + -radii.moonOrbit * Math.cos(interpolateMoonOrbitPosition(t) - moonOrbitPosition.startAngle()())) + ")");
 	    }
 	})
-	.duration(10000)
+	.duration(500)
 	.ease("linear");
+  },500);
 }
