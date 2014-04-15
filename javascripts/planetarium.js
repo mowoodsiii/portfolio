@@ -273,14 +273,9 @@ i=i+1;
 	var interpolateJupiterOrbitPosition = d3.interpolate(jupiterOrbitPosition.endAngle()(), (0.6 * Math.PI * i / 20));
 	var interpolateSaturnOrbitPosition = d3.interpolate(saturnOrbitPosition.endAngle()(), (0.4 * Math.PI * i / 20));
 	var interpolateUranusOrbitPosition = d3.interpolate(uranusOrbitPosition.endAngle()(), (0.2 * Math.PI * i / 20));
-	var interpolateNeptuneOrbitPosition = d3.interpolate(neptuneOrbitPosition.endAngle()(), (0.05 * Math.PI * i / 20));
+	var interpolateNeptuneOrbitPosition = d3.interpolate(neptuneOrbitPosition.endAngle()(), (0.1 * Math.PI * i / 20));
 
 // Animate Orbits
-	/*d3.select(".earth")
-	  .transition()
-	  .attr("transform", "translate(" + radii.earthOrbit * Math.sin(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + "," + -radii.earthOrbit * Math.cos(interpolateEarthOrbitPosition(t) - earthOrbitPosition.startAngle()()) + ")")
-	    .duration(2000);*/
-
 	d3.transition().tween("orbit", function () {
 	    return function (t) {
 	      // Animate Mercury orbit position
@@ -329,7 +324,7 @@ i=i+1;
 	      // Animate Saturn Planet position
 	      d3.select(".saturn")
 		.attr("transform", "translate(" + radii.saturnOrbit * Math.sin(interpolateSaturnOrbitPosition(t) - saturnOrbitPosition.startAngle()()) + "," + -radii.saturnOrbit * Math.cos(interpolateSaturnOrbitPosition(t) - saturnOrbitPosition.startAngle()()) + ")");
-	      // Animate Saturn Rings position
+	      // Transition Saturn Rings orbit
 	      d3.select(".saturnRings")
 		.attr("transform", "translate(" + radii.saturnOrbit * Math.sin(interpolateSaturnOrbitPosition(t) - saturnOrbitPosition.startAngle()()) + "," + -radii.saturnOrbit * Math.cos(interpolateSaturnOrbitPosition(t) - saturnOrbitPosition.startAngle()()) + ")");
 	      // Animate Uranus orbit position
