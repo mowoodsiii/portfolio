@@ -265,15 +265,15 @@ var i=0;
 setInterval(function(){
 i=i+1;
 // Interpolate Positions
-	var interpolateMercuryOrbitPosition = d3.interpolate(mercuryOrbitPosition.endAngle()(), (1 * Math.PI * i / 20));
-	var interpolateVenusOrbitPosition = d3.interpolate(venusOrbitPosition.endAngle()(), (2.3 * Math.PI * i / 20));
-	var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI *i / 20));
-	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (10 * Math.PI *i / 20));
-	var interpolateMarsOrbitPosition = d3.interpolate(marsOrbitPosition.endAngle()(), (2 * Math.PI));
-	var interpolateJupiterOrbitPosition = d3.interpolate(jupiterOrbitPosition.endAngle()(), (2 * Math.PI));
-	var interpolateSaturnOrbitPosition = d3.interpolate(saturnOrbitPosition.endAngle()(), (2 * Math.PI));
-	var interpolateUranusOrbitPosition = d3.interpolate(uranusOrbitPosition.endAngle()(), (2 * Math.PI));
-	var interpolateNeptuneOrbitPosition = d3.interpolate(neptuneOrbitPosition.endAngle()(), (2 * Math.PI));
+	var interpolateMercuryOrbitPosition = d3.interpolate(mercuryOrbitPosition.endAngle()(), (3 * Math.PI * i / 20));
+	var interpolateVenusOrbitPosition = d3.interpolate(venusOrbitPosition.endAngle()(), (2.5 * Math.PI * i / 20));
+	var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI * i / 20));
+	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (10 * Math.PI * i / 20));
+	var interpolateMarsOrbitPosition = d3.interpolate(marsOrbitPosition.endAngle()(), (1.5 * Math.PI * i / 20));
+	var interpolateJupiterOrbitPosition = d3.interpolate(jupiterOrbitPosition.endAngle()(), (0.9 * Math.PI * i / 20));
+	var interpolateSaturnOrbitPosition = d3.interpolate(saturnOrbitPosition.endAngle()(), (0.4 * Math.PI * i / 20));
+	var interpolateUranusOrbitPosition = d3.interpolate(uranusOrbitPosition.endAngle()(), (0.2 * Math.PI * i / 20));
+	var interpolateNeptuneOrbitPosition = d3.interpolate(neptuneOrbitPosition.endAngle()(), (0.1 * Math.PI * i / 20));
 
 // Animate Orbits
 	/*d3.select(".earth")
