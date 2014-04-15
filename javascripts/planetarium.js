@@ -230,11 +230,38 @@ var svg = solarSystem.append("svg")
 	  .style("stroke", "rgba(149, 131, 114, 0.2)")
 	  .style("stroke-width", "10pt");
 	// Jupiter Planet
+		// Define the gradient
+		var gradient = svg.append("svg:defs")
+			.append("svg:radialGradient")
+			.attr("id", "gradient")
+			.attr("cx", "50%")
+			.attr("cy", "50%")
+			.attr("fx", "50%")
+			.attr("fy", "50%")
+			.attr("r", "50%");
+		// Define the gradient colors
+		gradient.append("svg:stop")
+			.attr("offset", "0%")
+			.attr("stop-color", "rgba(255, 204, 128, 1.0)")
+			.attr("stop-opacity", 1);
+		gradient.append("svg:stop")
+			.attr("offset", "60%")
+			.attr("stop-color", "rgba(255, 204, 128, 1.0)")
+			.attr("stop-opacity", 1);
+		gradient.append("svg:stop")
+			.attr("offset", "85%")
+			.attr("stop-color", "rgba(255, 159, 95, 1.0)")
+			.attr("stop-opacity", 1);
+		gradient.append("svg:stop")
+			.attr("offset", "100%")
+			.attr("stop-color", "rgba(255, 204, 128, 1.0)")
+			.attr("stop-opacity", 1);
 	svg.append("circle")
 	  .attr("class", "jupiter")
 	  .attr("r", radii.jupiter)
 	  .attr("transform", "translate(0," + -radii.jupiterOrbit + ")")
-	  .style("fill", "rgba(255, 159, 95, 1.0)");
+	  //.style("fill", "rgba(255, 159, 95, 1.0)");
+	  .style("fill", "url(#gradient)");
 	// Saturn Planet
 	svg.append("circle")
 	  .attr("class", "saturn")
@@ -265,15 +292,15 @@ var i=0;
 setInterval(function(){
 i=i+1;
 // Interpolate Positions
-	var interpolateMercuryOrbitPosition = d3.interpolate(mercuryOrbitPosition.endAngle()(), (3 * Math.PI * i / 20));
-	var interpolateVenusOrbitPosition = d3.interpolate(venusOrbitPosition.endAngle()(), (2.5 * Math.PI * i / 20));
-	var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI * i / 20));
-	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (10 * Math.PI * i / 20));
-	var interpolateMarsOrbitPosition = d3.interpolate(marsOrbitPosition.endAngle()(), (1.5 * Math.PI * i / 20));
-	var interpolateJupiterOrbitPosition = d3.interpolate(jupiterOrbitPosition.endAngle()(), (0.6 * Math.PI * i / 20));
-	var interpolateSaturnOrbitPosition = d3.interpolate(saturnOrbitPosition.endAngle()(), (0.4 * Math.PI * i / 20));
-	var interpolateUranusOrbitPosition = d3.interpolate(uranusOrbitPosition.endAngle()(), (0.2 * Math.PI * i / 20));
-	var interpolateNeptuneOrbitPosition = d3.interpolate(neptuneOrbitPosition.endAngle()(), (0.1 * Math.PI * i / 20));
+	var interpolateMercuryOrbitPosition = d3.interpolate(mercuryOrbitPosition.endAngle()(), (1.47 * Math.PI * i / 10));
+	var interpolateVenusOrbitPosition = d3.interpolate(venusOrbitPosition.endAngle()(), (1.21 * Math.PI * i / 10));
+	var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (1 * Math.PI * i / 10));
+	var interpolateMoonOrbitPosition = d3.interpolate(moonOrbitPosition.endAngle()(), (8 * Math.PI * i / 10));
+	var interpolateMarsOrbitPosition = d3.interpolate(marsOrbitPosition.endAngle()(), (0.73 * Math.PI * i / 10));
+	var interpolateJupiterOrbitPosition = d3.interpolate(jupiterOrbitPosition.endAngle()(), (0.32 * Math.PI * i / 10));
+	var interpolateSaturnOrbitPosition = d3.interpolate(saturnOrbitPosition.endAngle()(), (0.22 * Math.PI * i / 10));
+	var interpolateUranusOrbitPosition = d3.interpolate(uranusOrbitPosition.endAngle()(), (0.12 * Math.PI * i / 10));
+	var interpolateNeptuneOrbitPosition = d3.interpolate(neptuneOrbitPosition.endAngle()(), (0.06 * Math.PI * i / 10));
 
 // Animate Orbits
 	d3.transition().tween("orbit", function () {
