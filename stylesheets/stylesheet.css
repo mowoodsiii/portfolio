@@ -1,3 +1,40 @@
+/* Fonts */
+@font-face
+{
+  font-family: EngineeringHand;
+  src: url(fonts/EngineeringHand.ttf);
+}
+
+@font-face
+{
+  font-family: Blake;
+  src: url(fonts/Blake.ttf);
+}
+
+@font-face
+{
+  font-family: MarketDeco;
+  src: url(fonts/MarketDeco.ttf);
+}
+
+@font-face
+{
+  font-family: NovemberSky;
+  src: url(fonts/NovemberSky.ttf);
+}
+
+@font-face
+{
+  font-family: NovemberSkyBold;
+  src: url(fonts/NovemberSkyBold.ttf);
+}
+
+@font-face
+{
+  font-family: WrestleMania;
+  src: url(fonts/WrestleMania.ttf);
+}
+
 /* Base Styles */
 html
 {
@@ -15,11 +52,23 @@ body
   height:      100%;
 }
 
+headline
+{
+  font-family:      MarketDeco;
+  letter-spacing: 6px;
+  text-align:       center;
+  font-size:        10pt;
+  color:              #383838;
+  display:           block;
+  padding-top:     10px;
+}
+
 h1
 {
+  font-family: Blake;
   letter-spacing: 8px;
   text-align:     center;
-  font-size:      26pt;
+  font-size:      35pt;
   color:          #111;
 }
 
@@ -29,6 +78,7 @@ p
 
 navbar > a
 {
+  font-family: MarketDeco;
   width:        100%;
   float:        left;
   display:      block;
@@ -41,6 +91,11 @@ navbar > a
 navbar > a:hover
 {
   color: #777;
+}
+
+section.strip > article
+{
+  margin-left:55px;
 }
 
 /* Sections */
@@ -212,6 +267,8 @@ circle.namestar, circle.star
   border-radius:      10px;
   background-color:   rgba(30,30,30,0.8);
 }
+
+
 
 /* Old Trash
 .bubble
