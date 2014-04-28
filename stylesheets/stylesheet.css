@@ -77,7 +77,8 @@ h1
 p
 {
   font-family: MarketDeco;
-  font-size:14pt;
+  font-size:12pt;
+  font-variant: small-caps;
 }
 
 navbar > a
