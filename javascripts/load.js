@@ -1,5 +1,5 @@
 function load(){
 planetarium();
-constellation();
 starfield();
+constellation();
 }
