@@ -60,7 +60,7 @@ headline
   font-size:        10pt;
   color:              #383838;
   display:           block;
-  margin:           10px 0 0 25px;
+  margin:           0px 0px 0px 25px;
   position:          fixed;
   width:              inherit;
 }
@@ -76,6 +76,8 @@ h1
 
 p
 {
+  font-family: MarketDeco;
+  font-size:14pt;
 }
 
 navbar > a
