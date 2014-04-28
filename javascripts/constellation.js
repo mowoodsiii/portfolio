@@ -1,11 +1,11 @@
 function constellation()
 {
-  var width = window.innerWidth,
+  /*var width = window.innerWidth,
 	height = window.innerHeight,
 	starcount = (width * height)/10000,
 	randomx = 0,
 	randomy = 0,
-	randomr = 0;
+	randomr = 0;*/
 
 d3.select('#starfield')
   .append('g')
