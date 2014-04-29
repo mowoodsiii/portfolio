@@ -67,27 +67,51 @@ headline
 
 h1
 {
-  font-family: Blake;
+  font-family:    Blake;
   letter-spacing: 8px;
   text-align:     center;
   font-size:      35pt;
   color:          #111;
 }
 
+h2
+{
+  font-family: Blake;
+  letter-spacing: 3px;
+  font-size: 16px;
+  text-align: center;
+  color: #111;
+}
+
+h3
+{
+  font-family: Blake;
+  letter-spacing: 1px;
+  font-size: 14pt;
+  color: #111;
+}
+
+subtitle
+{
+  color: #555;
+  font-size: 11pt;
+  text-align: center;
+}
+
 p
 {
   font-family: Bellerose;
-  font-size:14pt;
+  font-size:   14pt;
 }
 
-section#contentWrapper > p
+section#contentWrapper > article > p
 {
   margin: 10px;
 }
 
 navbar > a
 {
-  font-family: MarketDeco;
+  font-family:  MarketDeco;
   width:        100%;
   float:        left;
   display:      block;
