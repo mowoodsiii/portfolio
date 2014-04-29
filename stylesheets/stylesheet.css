@@ -60,9 +60,9 @@ headline
   font-size:      10pt;
   color:          #383838;
   display:        block;
-  margin:         0px 10px;
-  position:       fixed;
+  margin:         0px auto;
   width:          inherit;
+  overflow:       hidden;
 }
 
 h1
@@ -78,6 +78,11 @@ p
 {
   font-family: Bellerose;
   font-size:14pt;
+}
+
+section#contentWrapper > p
+{
+  margin: 10px;
 }
 
 navbar > a
