@@ -54,15 +54,15 @@ body
 
 headline
 {
-  font-family:      MarketDeco;
+  font-family:    MarketDeco;
   letter-spacing: 6px;
-  text-align:       center;
-  font-size:        10pt;
-  color:              #383838;
-  display:           block;
-  margin:           0px 0px 0px 25px;
-  position:          fixed;
-  width:              inherit;
+  text-align:     center;
+  font-size:      10pt;
+  color:          #383838;
+  display:        block;
+  margin:         0px 10px;
+  position:       fixed;
+  width:          inherit;
 }
 
 h1
@@ -97,12 +97,12 @@ navbar > a:hover
   color: #777;
 }
 
-section.strip > article
+section#strip > article
 {
   margin-left:55px;
 }
 
-section.strip > article > p 
+section#strip > article > p 
 {
   padding:20px;
 }
@@ -133,7 +133,7 @@ navbar#side
   animation:         openNav 3s ease;
 }
 
-#wrapper
+#frame
 {
   display:  block;
   overflow: hidden;
@@ -142,7 +142,7 @@ navbar#side
   height:   100%;
 }
 
-.strip
+#strip
 {
   display:           block;
   position:          relative;
@@ -151,17 +151,22 @@ navbar#side
   min-width:         250px;
   max-width:         600px;
   height:            100%;
-}
-
-
-#content
-{
   overflow-x:        hidden;
   overflow-y:        scroll;
   background:        rgb(54, 25, 25);
   background:        rgba(150, 150, 150, 0.75);
-  -webkit-animation: openContent 2s ease;
-  animation:         openContent 2s ease;
+  -webkit-animation: openStrip 2s ease;
+  animation:         openStrip 2s ease;
+}
+
+#contentWrapper
+{
+  width: auto;
+  padding: 0px 0px 0px 55px;
+  display: block;
+  overflow: hidden;  
+}
+
 }
 
 /* SVG Styles */
@@ -195,14 +200,14 @@ circle.namestar, circle.star
 }
 
 /* Animations */
-@-webkit-keyframes openContent
+@-webkit-keyframes openStrip
 {
 0%   {width:0px; min-width:0px; opacity:0.2;}
 40%  {width:0px; min-width:0px; opacity:0.2;}
 100% {width:50%; min-width:250px; opacity:1;}
 }
 
-@keyframes openContent
+@keyframes openStrip
 {
 0%   {width:0px; min-width:0px; opacity:0.2;}
 40%  {width:0px; min-width:0px; opacity:0.2;}
