@@ -93,9 +93,12 @@ h3
 
 subtitle
 {
-  color: #555;
+  color: #3c3c3c;
+  font-family: MarketDeco;
   font-size: 11pt;
+  font-variant: small-caps;
   text-align: center;
+  margin-top: -7px;
 }
 
 p
