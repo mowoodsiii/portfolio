@@ -207,7 +207,9 @@ navbar#side
   width: auto;
   /*padding: 0px 0px 0px 55px;*/
   display: block;
-  overflow: hidden;  
+  overflow: hidden;
+  -webkit-animation: fadeIn 3s ease;
+  animation:         fadeIn 3s ease;
 }
 
 }
@@ -220,6 +222,13 @@ path.constellationFill
   stroke-opacity: 0;
   fill:           rgb(220,220,220);
   fill-opacity:   0;
+  -webkit-animation: constellationFill 5s ease;
+  animation:         constellationFill 5s ease;
+}
+
+path.constellationFill
+{
+  fill: #900;
 }
 
 path.constellationLines
