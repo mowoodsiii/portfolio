@@ -146,6 +146,8 @@ img.banner
 {
   width: 100%;
   margin: 0;
+  -webkit-animation: fadeIn 5s ease;
+  animation:         fadeIn 5s ease;
 }
 
 /* Sections */
@@ -267,6 +269,20 @@ circle.namestar, circle.star
 0%   {width:0px; padding-left:0px;}
 70%  {width:0px; padding-left:0px;}
 100% {width:50px; padding-left:5px;}
+}
+
+@-webkit-keyframes fadeIn
+{
+0%   {opacity:0;}
+80%  {opacity:0;}
+100% {opacity:1;}
+}
+
+@keyframes fadeIn
+{
+0%   {opacity:0;}
+80%  {opacity:0;}
+100% {opacity:1;}
 }
 
 @-webkit-keyframes constellationFill
