@@ -142,6 +142,12 @@ section#strip > article > p
   padding:20px;
 }
 
+img.banner
+{
+  width: 100%;
+  margin: 0;
+}
+
 /* Sections */
 svg#planetarium
 {
