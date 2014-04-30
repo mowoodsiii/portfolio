@@ -146,8 +146,9 @@ img.banner
 {
   width: 100%;
   margin: 0;
-  -webkit-animation: fadeIn 5s ease;
-  animation:         fadeIn 5s ease;
+  box-shadow: 0px 8px 10px #444;
+  -webkit-animation: fadeIn 3s ease;
+  animation:         fadeIn 3s ease;
 }
 
 /* Sections */
@@ -163,10 +164,9 @@ navbar#side
   display:           block;
   overflow:          hidden;
   position:          fixed;
-
   width:             50px;
   height:            100%;
-  margin:            0px;
+  margin-left:       -55px;
   padding-top:       5px;
   padding-left:      5px;
   background:        rgb(17,17,17);
@@ -205,7 +205,7 @@ navbar#side
 #contentWrapper
 {
   width: auto;
-  padding: 0px 0px 0px 55px;
+  /*padding: 0px 0px 0px 55px;*/
   display: block;
   overflow: hidden;  
 }
@@ -274,14 +274,14 @@ circle.namestar, circle.star
 @-webkit-keyframes fadeIn
 {
 0%   {opacity:0;}
-80%  {opacity:0;}
+70%  {opacity:0;}
 100% {opacity:1;}
 }
 
 @keyframes fadeIn
 {
 0%   {opacity:0;}
-80%  {opacity:0;}
+70%  {opacity:0;}
 100% {opacity:1;}
 }
 
