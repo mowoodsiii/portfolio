@@ -217,10 +217,8 @@ navbar#side
 /* SVG Styles */
 path.constellationFill
 {
-  stroke-opacity:    0.0;
-  fill-opacity:      0.0;
-  fill:              #ccc;
-  fill:              rgb(220,220,220);
+  fill-opacity:   0.0;
+  fill: #ccc;
   -webkit-animation: constellationFill 5s ease;
   animation:         constellationFill 5s ease;
 }
