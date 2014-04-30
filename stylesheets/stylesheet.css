@@ -169,8 +169,8 @@ navbar#side
   margin-left:       -55px;
   padding-top:       5px;
   padding-left:      5px;
-  background:        rgb(17,17,17);
-  background:        rgba(17,17,17,0.7);
+  background:        rgb(40,40,40);
+  background:        rgba(40,40,40,0.7);
   z-index:           2;
   -webkit-animation: openNav 3s ease;
   animation:         openNav 3s ease;
@@ -213,7 +213,7 @@ navbar#side
 }
 
 /* SVG Styles */
-.constellationFill
+path.constellationFill
 {
   stroke:         #aaa;
   stroke-width:   0px;
@@ -222,6 +222,11 @@ navbar#side
   fill-opacity:   0;
   -webkit-animation: constellationFill 5s ease;
   animation:         constellationFill 5s ease;
+}
+
+path.constellationFill
+{
+  fill: #900;
 }
 
 path.constellationLines
@@ -287,19 +292,19 @@ circle.namestar, circle.star
 
 @-webkit-keyframes constellationFill
 {
-0%   {fill-opacity:0;}
-40%  {fill-opacity:0;}
-60% {fill-opacity:0.2;}
-90% {fill-opacity:0.2;}
+0%    {fill-opacity:0;}
+40%   {fill-opacity:0;}
+60%   {fill-opacity:0.2;}
+90%   {fill-opacity:0.2;}
 100%  {fill-opacity:0;}
 }
 
 @keyframes constellationFill
 {
-0%   {fill-opacity:0;}
-40%  {fill-opacity:0;}
-60% {fill-opacity:0.2;}
-90% {fill-opacity:0.2;}
+0%    {fill-opacity:0;}
+40%   {fill-opacity:0;}
+60%   {fill-opacity:0.2;}
+90%   {fill-opacity:0.2;}
 100%  {fill-opacity:0;}
 }
 
@@ -307,8 +312,8 @@ circle.namestar, circle.star
 {
 0%   {stroke-opacity:0;}
 40%  {stroke-opacity:0;}
-60% {stroke-opacity:1;}
-90% {stroke-opacity:1;}
+60%  {stroke-opacity:1;}
+90%  {stroke-opacity:1;}
 100% {stroke-opacity:0;}
 }
 
@@ -316,8 +321,8 @@ circle.namestar, circle.star
 {
 0%   {stroke-opacity:0;}
 40%  {stroke-opacity:0;}
-60% {stroke-opacity:1;}
-90% {stroke-opacity:1;}
+60%  {stroke-opacity:1;}
+90%  {stroke-opacity:1;}
 100% {stroke-opacity:0;}
 }
 
@@ -325,7 +330,7 @@ circle.namestar, circle.star
 {
 0%   {fill-opacity:0;}
 30%  {fill-opacity:0;}
-40% {fill-opacity:1;}
+40%  {fill-opacity:1;}
 100% {fill-opacity:1;}
 }
 
@@ -333,7 +338,7 @@ circle.namestar, circle.star
 {
 0%   {fill-opacity:0;}
 30%  {fill-opacity:0;}
-40% {fill-opacity:1;}
+40%  {fill-opacity:1;}
 100% {fill-opacity:1;}
 }
 
