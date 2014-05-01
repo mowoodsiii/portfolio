@@ -35,6 +35,8 @@
   src: url(fonts/Bellerose.ttf);
 }
 
+@import url(http://fonts.googleapis.com/css?family=Voltaire);
+
 /* Base Styles */
 html
 {
@@ -91,6 +93,7 @@ h3
   letter-spacing: 1px;
   font-size: 14pt;
   color: #111;
+  margin: 20px 10px 0px 10px;
 }
 
 subtitle
@@ -104,15 +107,11 @@ subtitle
   display:block;
 }
 
-p
+p, ul, li
 {
-  font-family: Bellerose;
+  font-family: Voltaire;
   font-size:   14pt;
-}
-
-section#contentWrapper > article > p
-{
-  margin: 10px;
+  margin: 0px 10px 10px 10px;
 }
 
 navbar > a
@@ -197,7 +196,7 @@ navbar#side
   overflow-x:        hidden;
   overflow-y:        scroll;
   background:        rgb(54, 25, 25);
-  background:        rgba(150, 150, 150, 0.75);
+  background:        rgba(150, 150, 150, 0.85);
   -webkit-animation: openStrip 2s ease;
   animation:         openStrip 2s ease;
 }
