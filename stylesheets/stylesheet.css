@@ -107,14 +107,14 @@ subtitle
   font-size: 11pt;
   font-variant: small-caps;
   text-align: center;
-  margin-top: -7px;
+  margin: -7px 10px 15px 10px;
   display:block;
 }
 
 p, ul, li
 {
   font-family: Voltaire;
-  font-size:   14pt;
+  font-size:   12pt;
   margin: 0px 10px 10px 10px;
 }
 
