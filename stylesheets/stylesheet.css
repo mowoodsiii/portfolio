@@ -118,6 +118,16 @@ p, ul, li
   margin: 0px 10px 10px 10px;
 }
 
+article > a
+{
+  color: #333;
+}
+
+article > a:hover
+{
+  color: #900;
+}
+
 navbar > a
 {
   font-family:  MarketDeco;
