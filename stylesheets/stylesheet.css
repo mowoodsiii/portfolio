@@ -129,7 +129,7 @@ article a:hover
   color: #900;
 }
 
-navbar > a
+navbar a
 {
   font-family:  MarketDeco;
   width:        100%;
@@ -139,11 +139,13 @@ navbar > a
   font-size:    9pt;
   margin-top:   5px;
   font-variant: small-caps;
+  text-decoration: none;
 }
 
-navbar > a:hover
+navbar a:hover
 {
   color: #777;
+  text-decoration: none;
 }
 
 section#strip > article
