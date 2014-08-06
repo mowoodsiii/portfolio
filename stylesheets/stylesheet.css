@@ -121,6 +121,7 @@ p, ul, li
 article a
 {
   color: #333;
+  text-decoration: none;
 }
 
 article a:hover
