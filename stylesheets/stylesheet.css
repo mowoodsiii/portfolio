@@ -120,13 +120,14 @@ p, ul, li
 
 article a
 {
-  color: #333;
+  color: #444;
   text-decoration: none;
 }
 
 article a:hover
 {
   color: #900;
+  text-decoration: none;
 }
 
 navbar a
