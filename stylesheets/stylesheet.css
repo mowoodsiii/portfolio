@@ -225,8 +225,8 @@ navbar#side
   overflow-y:        scroll;
   background:        rgb(54, 25, 25);
   background:        rgba(150, 150, 150, 0.85);
-  -webkit-animation: openStrip 2s ease;
-  animation:         openStrip 2s ease;
+  -webkit-animation: openStrip 6s ease;
+  animation:         openStrip 6s ease;
 }
 
 #contentWrapper
@@ -270,15 +270,15 @@ circle.namestar, circle.star
 /* Animations */
 @-webkit-keyframes openStrip
 {
-0%   {width:0px; min-width:0px; opacity:0.2;}
-40%  {width:0px; min-width:0px; opacity:0.2;}
+0%   {width:0px; min-width:0px; opacity:0.0;}
+66%  {width:0px; min-width:0px; opacity:0.0;}
 100% {width:50%; min-width:250px; opacity:1;}
 }
 
 @keyframes openStrip
 {
-0%   {width:0px; min-width:0px; opacity:0.2;}
-40%  {width:0px; min-width:0px; opacity:0.2;}
+0%   {width:0px; min-width:0px; opacity:0.0;}
+66%  {width:0px; min-width:0px; opacity:0.0;}
 100% {width:50%; min-width:250px; opacity:1;}
 }
 
