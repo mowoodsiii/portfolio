@@ -272,7 +272,7 @@ circle.namestar, circle.star
 {
 0%   {width:0px; min-width:0px; opacity:0.0;}
 40%  {width:0px; min-width:0px; opacity:0.0;}
-60%  {width:0px; min-width:0px; opacity:0.0;}
+60%  {width:50%; min-width:250px; opacity:1;}
 100% {width:50%; min-width:250px; opacity:1;}
 }
 
@@ -280,14 +280,14 @@ circle.namestar, circle.star
 {
 0%   {width:0px; min-width:0px; opacity:0.0;}
 40%  {width:0px; min-width:0px; opacity:0.0;}
-60%  {width:0px; min-width:0px; opacity:0.0;}
+60%  {width:50%; min-width:250px; opacity:1;}
 100% {width:50%; min-width:250px; opacity:1;}
 }
 
 @-webkit-keyframes openNav
 {
 0%   {width:0px; padding-left:0px;}
-60%  {width:0px; padding-left:0px;}
+70%  {width:0px; padding-left:0px;}
 75% {width:50px; padding-left:5px;}
 100% {width:50px; padding-left:5px;}
 }
@@ -295,7 +295,7 @@ circle.namestar, circle.star
 @keyframes openNav
 {
 0%   {width:0px; padding-left:0px;}
-60%  {width:0px; padding-left:0px;}
+70%  {width:0px; padding-left:0px;}
 75% {width:50px; padding-left:5px;}
 100% {width:50px; padding-left:5px;}
 }
@@ -303,7 +303,7 @@ circle.namestar, circle.star
 @-webkit-keyframes fadeIn
 {
 0%   {opacity:0;}
-60%  {opacity:0;}
+70%  {opacity:0;}
 75% {opacity:1;}
 100% {opacity:1;}
 }
@@ -311,7 +311,7 @@ circle.namestar, circle.star
 @keyframes fadeIn
 {
 0%   {opacity:0;}
-60%  {opacity:0;}
+70%  {opacity:0;}
 75% {opacity:1;}
 100% {opacity:1;}
 }
