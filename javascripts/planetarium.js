@@ -191,7 +191,7 @@ var svg = solarSystem.append("svg")
 	svg.append("circle")
 	  .attr("class", "sun")
 	  .attr("r", radii.sun)
-	  .style("fill", "rgba(255, 204, 0, 1.0)");
+	  .style("fill", "rgba(204, 153, 0, 1.0)");
 	// Mercury Planet
 	svg.append("circle")
 	  .attr("class", "mercury")
