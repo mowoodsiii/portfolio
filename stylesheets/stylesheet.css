@@ -58,6 +58,14 @@ body
   height:      100%;
 }
 
+div {
+  display: none;
+}
+
+:target {
+  display: block;
+}
+
 headline
 {
   font-family:    MarketDeco;
