@@ -173,8 +173,8 @@ img.banner
   width: 100%;
   margin: 0;
   box-shadow: 0px 8px 10px #444;
-  -webkit-animation: fadeIn 10s ease;
-  animation:         fadeIn 10s ease;
+  /*-webkit-animation: fadeIn 10s ease;
+  animation:         fadeIn 10s ease;*/
 }
 
 
@@ -199,8 +199,8 @@ navbar#side
   background:        rgb(40,40,40);
   background:        rgba(40,40,40,0.7);
   z-index:           2;
-  -webkit-animation: openNav 10s ease;
-  animation:         openNav 10s ease;
+  /*-webkit-animation: openNav 10s ease;
+  animation:         openNav 10s ease;*/
 }
 
 #frame
@@ -225,8 +225,8 @@ navbar#side
   overflow-y:        scroll;
   background:        rgb(54, 25, 25);
   background:        rgba(150, 150, 150, 0.85);
-  -webkit-animation: openStrip 10s ease;
-  animation:         openStrip 10s ease;
+  /*-webkit-animation: openStrip 10s ease;
+  animation:         openStrip 10s ease;*/
 }
 
 #contentWrapper
@@ -235,8 +235,8 @@ navbar#side
   /*padding: 0px 0px 0px 55px;*/
   display: block;
   overflow: hidden;
-  -webkit-animation: fadeIn 10s ease;
-  animation:         fadeIn 10s ease;
+  /*-webkit-animation: fadeIn 10s ease;
+  animation:         fadeIn 10s ease;*/
 }
 
 }
@@ -246,8 +246,8 @@ path.constellationFill
 {
   /*fill-opacity:   0.0;*/
   fill: #ccc;
-  -webkit-animation: constellationFill 5s ease;
-  animation:         constellationFill 5s ease;
+  /*-webkit-animation: constellationFill 5s ease;
+  animation:         constellationFill 5s ease;*/
 }
 
 path.constellationLines
@@ -256,15 +256,15 @@ path.constellationLines
   stroke-width:   1px;
   stroke-opacity: 0.0;
   fill-opacity:   0.0;
-  -webkit-animation: constellationLines 5s ease;
-  animation:         constellationLines 5s ease;
+  /*-webkit-animation: constellationLines 5s ease;
+  animation:         constellationLines 5s ease;*/
 }
 
 circle.namestar, circle.star
 {
   fill: #bbb;
-  -webkit-animation: namestar 3s ease;
-  animation:         namestar 3s ease;
+  /*-webkit-animation: namestar 3s ease;
+  animation:         namestar 3s ease;*/
 }
 
 /* Animations */
