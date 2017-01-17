@@ -181,8 +181,8 @@ img.banner
   width: 100%;
   margin: 0;
   box-shadow: 0px 8px 10px #444;
-  -webkit-animation: fadeIn 3s ease;
-  animation:         fadeIn 3s ease;
+  /*-webkit-animation: fadeIn 3s ease;
+  animation:         fadeIn 3s ease;*/
 }
 
 
@@ -247,6 +247,10 @@ navbar#side
   animation:         fadeIn 3s ease;
 }
 
+#fadeWrapper
+{
+  -webkit-animation: fadeIn 3s ease;
+  animation:         fadeIn 3s ease;
 }
 
 /* SVG Styles */
