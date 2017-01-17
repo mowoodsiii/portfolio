@@ -263,56 +263,56 @@ path.constellationLines
 circle.namestar, circle.star
 {
   fill: #bbb;
-  -webkit-animation: namestar 3s ease;
-  animation:         namestar 3s ease;
+  /*-webkit-animation: namestar 3s ease;
+  animation:         namestar 3s ease;*/
 }
 
 /* Animations */
 @-webkit-keyframes openStrip
 {
 0%   {width:0px; min-width:0px; opacity:0.0;}
-40%  {width:0px; min-width:0px; opacity:0.0;}
-55%  {width:50%; min-width:250px; opacity:1;}
+20%  {width:0px; min-width:0px; opacity:0.0;}
+60%  {width:50%; min-width:250px; opacity:1;}
 100% {width:50%; min-width:250px; opacity:1;}
 }
 
 @keyframes openStrip
 {
 0%   {width:0px; min-width:0px; opacity:0.0;}
-40%  {width:0px; min-width:0px; opacity:0.0;}
-55%  {width:50%; min-width:250px; opacity:1;}
+20%  {width:0px; min-width:0px; opacity:0.0;}
+60%  {width:50%; min-width:250px; opacity:1;}
 100% {width:50%; min-width:250px; opacity:1;}
 }
 
 @-webkit-keyframes openNav
 {
 0%   {width:0px; padding-left:0px;}
-50%  {width:0px; padding-left:0px;}
-55% {width:50px; padding-left:5px;}
+40%  {width:0px; padding-left:0px;}
+60% {width:50px; padding-left:5px;}
 100% {width:50px; padding-left:5px;}
 }
 
 @keyframes openNav
 {
 0%   {width:0px; padding-left:0px;}
-50%  {width:0px; padding-left:0px;}
-55% {width:50px; padding-left:5px;}
+40%  {width:0px; padding-left:0px;}
+60% {width:50px; padding-left:5px;}
 100% {width:50px; padding-left:5px;}
 }
 
 @-webkit-keyframes fadeIn
 {
 0%   {opacity:0;}
-55%  {opacity:0;}
-60% {opacity:1;}
+60%  {opacity:0;}
+80% {opacity:1;}
 100% {opacity:1;}
 }
 
 @keyframes fadeIn
 {
 0%   {opacity:0;}
-55%  {opacity:0;}
-60% {opacity:1;}
+60%  {opacity:0;}
+80% {opacity:1;}
 100% {opacity:1;}
 }
 
