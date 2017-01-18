@@ -24,7 +24,8 @@ var radii = {
   "jupiterOrbit": radius * 0.4,
   "saturnOrbit": radius * 0.575,
   "uranusOrbit": radius * 0.75,
-  "neptuneOrbit": radius * 0.9
+  "neptuneOrbit": radius * 0.9,
+  "asteroidBeltOrbit": radius * 0.99
 };
 	
 var svg = solarSystem.append("svg")
@@ -285,19 +286,26 @@ var svg = solarSystem.append("svg")
     // Uranus Rings
     svg.append("line")
       .attr("class", "uranusRings")
-	  .attr("x1",-1*(2*radii.uranus/3))
+	  .attr("x1",-0.7*radii.uranus)
       .attr("y1",0)
-      .attr("x1",(2*radii.uranus/3))
+      .attr("x1",0.7*radii.uranus)
       .attr("y2",0)
       .attr("stroke-width",2)
       .attr("transform", "translate(0," + -radii.uranusOrbit + ")")
-      .attr("stroke","rgba(113, 170, 255, 1.0)")
+      .attr("stroke","rgba(178, 178, 178, 0.35)")
 	// Neptune Planet
 	svg.append("circle")
 	  .attr("class", "neptune")
 	  .attr("r", radii.neptune)
 	  .attr("transform", "translate(0," + -radii.neptuneOrbit + ")")
 	  .style("fill", "rgba(113, 170, 255, 1.0)");
+    // Kuiper Belt's orbit
+	svg.append("circle")
+	  .attr("class", "kuiperBeltOrbit")
+	  .attr("r", radii.kuiperBeltOrbit)
+	  .style("fill", "none")
+	  .style("stroke", "rgba(149, 131, 114, 0.2)")
+	  .style("stroke-width", "30pt");
 var i=0;
 setInterval(function(){
 i=i+1;
