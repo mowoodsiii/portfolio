@@ -282,6 +282,16 @@ var svg = solarSystem.append("svg")
 	  .attr("r", radii.uranus)
 	  .attr("transform", "translate(0," + -radii.uranusOrbit + ")")
 	  .style("fill", "rgba(150, 232, 191, 1.0)");
+    // Uranus Rings
+    svg.append("line")
+      .attr("class", "uranusRings")
+	  .attr("x1",-5)
+      .attr("y1",0)
+      .attr("x2",5)
+      .attr("y2",0)
+      .attr("stroke-width",2)
+      .attr("transform", "translate(0," + -radii.uranusOrbit + ")")
+      .attr("stroke","rgba(113, 170, 255, 1.0)")
 	// Neptune Planet
 	svg.append("circle")
 	  .attr("class", "neptune")
@@ -360,7 +370,10 @@ i=i+1;
 	      // Animate Uranus Planet position
 	      d3.select(".uranus")
 		.attr("transform", "translate(" + radii.uranusOrbit * Math.sin(interpolateUranusOrbitPosition(t) - uranusOrbitPosition.startAngle()()) + "," + -radii.uranusOrbit * Math.cos(interpolateUranusOrbitPosition(t) - uranusOrbitPosition.startAngle()()) + ")");
-	      // Animate Neptune orbit position
+	      // Transition Uranus Rings orbit
+	      d3.select(".uranusRings")
+		.attr("transform", "translate(" + radii.uranusOrbit * Math.sin(interpolateUranusOrbitPosition(t) - uranusOrbitPosition.startAngle()()) + "," + -radii.uranusOrbit * Math.cos(interpolateUranusOrbitPosition(t) - uranusOrbitPosition.startAngle()()) + ")");
+          // Animate Neptune orbit position
 	      d3.select(".neptuneOrbitPosition")
 		.attr("d", neptuneOrbitPosition.endAngle(interpolateNeptuneOrbitPosition(t)));
 	      // Animate Neptune Planet position
