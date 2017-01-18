@@ -25,7 +25,7 @@ var radii = {
   "saturnOrbit": radius * 0.575,
   "uranusOrbit": radius * 0.75,
   "neptuneOrbit": radius * 0.9,
-  "asteroidBeltOrbit": radius * 0.99
+  "kuiperBeltOrbit": radius * 0.99
 };
 	
 var svg = solarSystem.append("svg")
