@@ -58,6 +58,30 @@ body
   height:      100%;
 }
 
+input[type=checkbox] {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+
+label {
+  position:absolute;
+  z-index: 2;
+  cursor: pointer;
+  font-family:  MarketDeco;
+  float:        left;
+  color:        #777;
+  font-size:    9pt;
+  margin-top:   5px;
+  font-variant: small-caps;
+  text-decoration: none;
+}
+
+/* Toggled State */
+input[type=checkbox]:checked ~ section#frame {
+   display:none;
+}
+
 div {
   display: none;
 }
