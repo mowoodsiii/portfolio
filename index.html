@@ -3,7 +3,7 @@
 <html>
 <head>
   <!--<meta http-equiv="refresh" content="0; URL='http://mowoodsiii.github.io/portfolio/#overview'" />-->
-  <script>window.location = "http://mowoodsiii.github.io/portfolio/#overview";</script>
+  <!--<script>window.location = "http://mowoodsiii.github.io/portfolio/#overview";</script>-->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -26,7 +26,7 @@
 </head>
 
 <body onload="load()">
-    <label for="toggle-1">on/off</label>
+    <label id="onoff" for="toggle-1">on/off</label>
     <input type="checkbox" id="toggle-1">
     <section id="frame">
         <section id="strip">
@@ -69,31 +69,107 @@
                         <h1 id="title">PROJECTS</h1>
                         <article> 
                             <img class="banner" src="images/banner_projects.png" />
-                            <p>Here you will find an overview of several projects in which Maurice has been involved over the past few years. Be sure to check out any links that may provide extra information on the various programs (e.g. <a href="./rocketsat.html">Rocket Sat</a>) and companies (<a href="http://www.roadnarrows.com/">RoadNarrows Robotics</a>) with which I&#39;ve worked.</p>
-                            <headline>2016</headline>
-                                <hr noshade="noshade" />
-                                    <h3>UNP MAXWELL CubeSat Mission</h3>
-                                    <h4>X-Band Reflectarray and CDMA Demonstration Bus</h4>
-                                    <img class="banner" src="images/banner_maxwell.png" />
-                                    <p>&nbsp;</p>
-                                <hr noshade="noshade" />
-                                    <h3>QB50 Challenger CubeSat Mission</h3>
-                                    <h4>Ion-Neutral Mass Spectrometer 2.5U Science Bus</h4>
-                                    <img class="banner" src="images/banner_qb50.png" />
-                                    <p>&nbsp;</p>
-                            <headline>2011</headline>
-                                <hr noshade="noshade" />
-                                    <h3>Rocket Sat-X Sounding Rocket Payload</h3>
-                                    <h4>Characterizing Dynamics Of Reentry On A Vehicle</h4>
-                                    <img class="banner" src="images/banner_rexsat.jpeg" />
-                                    <p>The <a href="./roacketsat.html">Rocket SAT-X</a> program allows for deployable out of the rocket (once the rocket reaches an apogee of 160km). The ReEntry Experiment (ReX) Capsule was designed to be jettisoned from the rocket body, where it reentered the earth&#39;s atmosphere while taking large amounts of inertial-dynamic data relating to the amount of air resistance experienced by the vehicle body. The payload was required to survive the violent reentry process, terrestrial impact, and was to be recovered from the Atlantic Ocean several hours after launch. This project launched in August of 2011.</p>
-                                    <p>View the ReX team&#39;s submission to the 2012 Colorado Space Grant Space Symposium <a href="./documents/Rex_Paper.pdf">here</a></p>
-                            <headline>2010</headline>
-                                <hr noshade="noshade" />
-                                    <h3>Demo Sat Balloon Payload (Mentored)</h3>
-                                    <h4>Understanding Appearance Of Fraunhaufer Spectral Lines With Respect To Altitude</h4>
-                                    <img class="banner" src="images/banner_demosat.png" />
-                                    <p>&nbsp;</p>
+                            <p style="margin-bottom:40px;">Here you will find an overview of several projects in which Maurice has been involved over the past few years. Click on each header to expand its contents and be sure to check out any links that may provide extra information on the various programs (e.g. <a href="./rocketsat.html">Rocket Sat</a>) and companies (<a href="http://www.roadnarrows.com/">RoadNarrows Robotics</a>) with which I&#39;ve worked.</p>
+                            
+                            
+                            <label class="subsection" for="toggle-cubesat">CubeSat Missions</label>
+                            <headline>nanosatellite missions</headline>
+                            <hr noshade="noshade" />
+                            <input type="checkbox" checked="checked" id="toggle-cubesat">
+                                <section class="subsection">
+                                    <hr noshade="noshade" />
+                                        <headline>2016</headline>
+                                        <h3>UNP MAXWELL CubeSat Mission</h3>
+                                        <h4>X-Band Reflectarray and CDMA Demonstration Bus</h4>
+                                        <img class="banner" src="images/banner_maxwell.png" />
+                                        <p>&nbsp;</p>
+                                    <hr noshade="noshade" />
+                                        <headline>2016</headline>
+                                        <h3>QB50 Challenger CubeSat Mission</h3>
+                                        <h4>Ion-Neutral Mass Spectrometer 2.5U Science Bus</h4>
+                                        <img class="banner" src="images/banner_qb50.png" />
+                                        <p>&nbsp;</p>
+                                    <hr noshade="noshade" />
+                                    <hr noshade="noshade" />
+                                </section>
+                                
+                                
+                            <label class="subsection" for="toggle-rocketsat">RocketSat Missions</label>
+                            <headline>sounding rocket science payloads</headline>
+                            <hr noshade="noshade" />
+                            <input type="checkbox" checked="checked" id="toggle-rocketsat">
+                                <section class="subsection">
+                                    <hr noshade="noshade" />
+                                        <headline>2011</headline>
+                                        <h3>Rocket Sat-X Sounding Rocket Payload</h3>
+                                        <h4>Characterizing Dynamics Of Reentry On A Vehicle</h4>
+                                        <img class="banner" src="images/banner_rexsat.jpeg" />
+                                        <p>The <a href="./roacketsat.html">Rocket SAT-X</a> program allows for deployable out of the rocket (once the rocket reaches an apogee of 160km). The ReEntry Experiment (ReX) Capsule was designed to be jettisoned from the rocket body, where it reentered the earth&#39;s atmosphere while taking large amounts of inertial-dynamic data relating to the amount of air resistance experienced by the vehicle body. The payload was required to survive the violent reentry process, terrestrial impact, and was to be recovered from the Atlantic Ocean several hours after launch. This project launched in August of 2011.</p>
+                                        <p>View the ReX team&#39;s submission to the 2012 Colorado Space Grant Space Symposium <a href="./documents/Rex_Paper.pdf">here</a></p>
+                                    <hr noshade="noshade" />
+                                    <hr noshade="noshade" />
+                                </section>
+                            
+                            
+                            <label class="subsection" for="toggle-demosat">DemoSat Missions</label>
+                            <headline>weather balloon science payloads</headline>
+                            <hr noshade="noshade" />
+                            <input type="checkbox" checked="checked" id="toggle-demosat">
+                                <section class="subsection">
+                                    <hr noshade="noshade" />
+                                        <headline>2010</headline>
+                                        <h3>Sun Spectro Sat</h3>
+                                        <h4>Understanding Appearance Of Fraunhaufer Spectral Lines With Respect To Altitude</h4>
+                                        <img class="banner" src="images/banner_sunspectro.jpg" />
+                                        <p>Sun Spectro Sat (SSS; by Maurice Woods, Motoaki Honda, and Sara Gray) is a high altitude spectrometer payload designed to collect data concerning the absorption of solar light by the Earth's atmosphere at different altitudes. This project was done as a part of the Frontiers of Science Institute (FSI) UNC Undergraduate research opportunity, where high school students Sara Gray, Jim Wiley, and Erik Travis joined the UNC undergraduate students for these demo sat launches</p>
+                                    <hr noshade="noshade" />
+                                        <headline>2008</headline>
+                                        <h3>Go Green! Sat</h3>
+                                        <h4>Exploring Energy Recapturing Techniques for Tumbling Payloads</h4>
+                                        <img class="banner" src="images/banner_demosat.png" />
+                                        <p>&nbsp;</p>
+                                    <hr noshade="noshade" />
+                                    <hr noshade="noshade" />
+                                </section>
+                                
+                                
+                            <label class="subsection" for="toggle-robotics">Robotics Projects</label>
+                            <headline>autonomous electromechanical systems</headline>
+                            <hr noshade="noshade" />
+                            <input type="checkbox" checked="checked" id="toggle-robotics">
+                                <section class="subsection">
+                                    <hr noshade="noshade" />
+                                        <headline>2016</headline>
+                                        <h3>Hungry Hungry Hippo Challenge</h3>
+                                        <h4>Robot built to collect and shoot ping pong balls through hoops</h4>
+                                        <img class="banner" src="images/banner_demosat.png" />
+                                        <p>&nbsp;</p>
+                                    <hr noshade="noshade" />
+                                        <headline>2012</headline>
+                                        <h3>Hekateros</h3>
+                                        <h4>Robotic Manipulator Arm (RoadNarrows)</h4>
+                                        <img class="banner" src="images/banner_demosat.png" />
+                                        <p><a href="https://github.com/roadnarrows-robotics/hekateros/wiki">Product Page</a></p>
+                                    <hr noshade="noshade" />
+                                    <hr noshade="noshade" />
+                                </section>
+                                
+                            <label class="subsection" for="toggle-physics">Physics Publications</label>
+                            <headline>experiments in the physical sciences</headline>
+                            <hr noshade="noshade" />
+                            <input type="checkbox" checked="checked" id="toggle-physics">
+                                <section class="subsection">
+                                    <hr noshade="noshade" />
+                                        <headline>2012</headline>
+                                        <h3>Schlieren Imaging</h3>
+                                        <h4>Color schlieren imaging with a two-path, double knife edge system</h4>
+                                        <img class="banner" src="images/banner_schlieren.jpg" />
+                                        <p>The traditional arrangement for visualizing optical phenomena with the schlieren technique is modified to include a Mach-Zehnder geometry. This allows for the implementation of two independent knife edges along two different beam paths, resulting in an enhanced combined image that is uniquely adjustable. Post-processed combined images are also generated by spatially separating the paths from each arm and then colorizing and combining the images into a single composite. In this way, bidirectional, color schlieren images have been produced using both white-light and monochromatic sources.</p>
+                                        <p>This article can be found in <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-22-7-8041">Optics Express, Vol 22, Issue 7</a></p>
+                                    <hr noshade="noshade" />
+                                    <hr noshade="noshade" />
+                                </section>
+                            
                         </article> 
                     </div>
                     

@@ -62,9 +62,10 @@ input[type=checkbox] {
    position: absolute;
    top: -9999px;
    left: -9999px;
+   display: none;
 }
 
-label {
+label#onoff {
   position:absolute;
   z-index: 2;
   cursor: pointer;
@@ -78,15 +79,30 @@ label {
 }
 
 /* Toggled State */
-input[type=checkbox]:checked ~ section#frame {
+input[type=checkbox]:checked + section#frame {
    display:none;
+}
+
+input[type=checkbox]:checked + section.subsection {
+   max-height:0px;
+   -webkit-animation: closeSub 0.7s ease;
+   animation:         closeSub 0.7s ease;
+   opacity: 0;
+}
+
+
+
+section.subsection {
+  -webkit-animation: openSub 0.7s ease;
+  animation:         openSub 0.7s ease;
+  opacity: 1;
 }
 
 div {
   display: none;
 }
 
-:target {
+div:target {
   display: block;
 }
 
@@ -131,6 +147,20 @@ h3
   color: #111;
   margin: 20px 10px 0px 10px;
 }
+
+label.subsection
+{
+  font-family: Blake;
+  letter-spacing: 1px;
+  color: #111;
+  font-weight: bold;
+  display: block;
+  font-size: 23pt;
+  cursor:n-resize;
+  position: relative;
+  text-align: center;
+}
+
 
 h4
 {
@@ -318,6 +348,37 @@ circle.namestar, circle.star
 40%  {width:0px; min-width:0px; opacity:0.0;}
 80%  {width:50%; min-width:250px; opacity:1;}
 100% {width:50%; min-width:250px; opacity:1;}
+}
+
+@-webkit-keyframes openSub
+{
+0%   {max-height:0px; opacity:0.0;}
+50% {max-height:1000px; opacity:0.0;}
+100% {max-height:1000px; opacity:1;}
+}
+
+@keyframes openSub
+{
+0%   {max-height:0px; opacity:0.0;}
+50% {max-height:1000px; opacity:0.0;}
+100% {max-height:1000px; opacity:1;}
+}
+
+@-webkit-keyframes closeSub
+{
+0%   {max-height:1000px; opacity:1.0;}
+50% {max-height:1000px; opacity:0.0;}
+99% {max-height:0px; opacity:0.0;}
+100% {max-height:0px; opacity:0.0;}
+
+}
+
+@keyframes closeSub
+{
+0%   {max-height:1000px; opacity:1.0;}
+50% {max-height:1000px; opacity:0.0;}
+99% {max-height:0px; opacity:0.0;}
+100% {max-height:0px; opacity:0.0;}
 }
 
 @-webkit-keyframes openNav
