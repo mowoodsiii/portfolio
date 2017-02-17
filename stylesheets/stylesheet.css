@@ -96,6 +96,8 @@ section.subsection {
   -webkit-animation: openSub 0.7s ease;
   animation:         openSub 0.7s ease;
   opacity: 1;
+  background:        rgb(85,85,85);
+  background:        rgba(85,85,85,0.7);
 }
 
 div {
@@ -191,13 +193,13 @@ p, ul, li
 
 article a
 {
-  color: #444;
+  color: #900;
   text-decoration: none;
 }
 
 article a:hover
 {
-  color: #900;
+  color: #444;
   text-decoration: none;
 }
 
@@ -285,7 +287,7 @@ navbar#side
   height:            100%;
   overflow-x:        hidden;
   overflow-y:        scroll;
-  background:        rgb(54, 25, 25);
+  background:        rgb(150, 150, 150);
   background:        rgba(150, 150, 150, 0.85);
   -webkit-animation: openStrip 5s ease;
   animation:         openStrip 5s ease;
