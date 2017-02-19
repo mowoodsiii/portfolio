@@ -243,6 +243,10 @@ var svg = solarSystem.append("svg")
 		// Define the gradient colors
 		gradient.append("svg:stop")
 			.attr("offset", "0%")
+			.attr("stop-color", "rgba(255, 159, 95, 1.0)")
+			.attr("stop-opacity", 1);
+		gradient.append("svg:stop")
+			.attr("offset", "15%")
 			.attr("stop-color", "rgba(255, 204, 128, 1.0)")
 			.attr("stop-opacity", 1);
 		gradient.append("svg:stop")
