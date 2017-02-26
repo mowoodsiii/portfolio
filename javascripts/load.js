@@ -3,5 +3,5 @@ function load(){
     starfield();
     
     var x = Math.floor((Math.random() * 3) + 1);
-    document.getElementById('profile').src = x+'.png';
+    document.getElementById('profile').src = 'images/'+x+'.png';
 }
