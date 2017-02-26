@@ -1,5 +1,7 @@
 function load(){
-planetarium();
-starfield();
-//constellation();
+    planetarium();
+    starfield();
+    
+    var x = Math.floor((Math.random() * 3) + 1);
+    document.getElementById('profile').src = x+'.png';
 }
