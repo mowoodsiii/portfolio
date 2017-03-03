@@ -191,6 +191,12 @@ p, ul, li
   margin: 0px 10px 10px 10px;
 }
 
+span.highlight
+{
+  color: #900;
+  text-decoration: none; 
+}
+
 article a
 {
   color: #900;
