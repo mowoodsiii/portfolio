@@ -9,6 +9,11 @@
   stroke-width: 1.5px;
 }
 
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
 .link {
   fill: none;
   stroke: #9ecae1;
@@ -100,7 +105,7 @@ function tick() {
 
 // Color leaf nodes orange, and packages white or blue.
 function color(d) {
-  return d._children ? "#3182bd" : d.children ? "#c6dbef" : "#fd8d3c";
+  return d._children ? "#3182bd" : d.children ? "#c6dbef" : "#ff0000";
 }
 
 // Toggle children on click.
