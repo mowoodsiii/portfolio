@@ -87,10 +87,10 @@ function update() {
       .on("click", click)
       .call(force.drag);
 	  
-  node.append("text")
+  node.enter().append("text")
       .attr("dy", ".35em")
       .attr("text-anchor", "middle")
-      .text(function(d) { return "t"; });
+      .text(function(d) { return "test"; });
 }
 
 function tick() {
