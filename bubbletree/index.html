@@ -81,6 +81,11 @@ function update() {
       .style("fill", color)
       .on("click", click)
       .call(force.drag);
+	  
+  node.append("text")
+      .attr("dy", ".35em")
+      .attr("text-anchor", "middle")
+      .text(function(d) { return d.name;});
 }
 
 function tick() {
