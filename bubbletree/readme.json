@@ -2,7 +2,7 @@
  "name": "flare",
  "children": [
   {
-   "name": "analytics",
+   "name": "analytics", "size": 6714,
    "children": [
     {
      "name": "cluster",
@@ -26,7 +26,7 @@
     {
      "name": "optimization",
      "children": [
-      {"name": "AspectRatioBanker", "size": 500000}
+      {"name": "AspectRatioBanker", "size": 500000, "color": #bb0000}
      ]
     }
    ]
