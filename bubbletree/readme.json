@@ -26,7 +26,7 @@
     {
      "name": "optimization",
      "children": [
-      {"name": "AspectRatioBanker", "size": 50000}
+      {"name": "AspectRatioBanker", "size": 500000}
      ]
     }
    ]
