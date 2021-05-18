@@ -5,17 +5,17 @@
   src: url(fonts/EngineeringHand.ttf);
 }
 
-@font-face
+/*@font-face
 {
   font-family: Blake;
   src: url(fonts/Blake.ttf);
-}
+}*/
 
-@font-face
+/*@font-face
 {
   font-family: MarketDeco;
   src: url(fonts/MarketDeco.ttf);
-}
+}*/
 
 @font-face
 {
@@ -37,8 +37,8 @@
 
 @font-face
 {
-  font-family: Voltaire;
-  src: url(fonts/Voltaire.ttf);
+  font-family: Volt aire;
+  src: url(fonts/Volt aire.ttf);
 }
 
 /* Base Styles */
@@ -69,7 +69,7 @@ label#onoff {
   position:absolute;
   z-index: 2;
   cursor: pointer;
-  font-family:  MarketDeco;
+  font-family:  'Baloo Da 2';
   float:        left;
   color:        #777;
   font-size:    9pt;
@@ -110,7 +110,7 @@ div:target {
 
 headline
 {
-  font-family:    MarketDeco;
+  font-family:    'Baloo Da 2';
   letter-spacing: 6px;
   text-align:     center;
   font-size:      10pt;
@@ -123,7 +123,7 @@ headline
 
 h1
 {
-  font-family:    Blake;
+  font-family:    Megrim;
   letter-spacing: 8px;
   text-align:     center;
   font-size:      35pt;
@@ -134,7 +134,7 @@ h1
 
 h2
 {
-  font-family: Blake;
+  font-family: Megrim;
   letter-spacing: 3px;
   font-size: 16px;
   text-align: center;
@@ -145,16 +145,16 @@ h2
 
 h3
 {
-  font-family: Blake;
+  font-family: Megrim;
   letter-spacing: 1px;
-  font-size: 14pt;
+  font-size: 16pt;
   color: #111;
   margin: 20px 10px 0px 10px;
 }
 
 label.subsection
 {
-  font-family: Blake;
+  font-family: Megrim;
   letter-spacing: 1px;
   color: #111;
   font-weight: bold;
@@ -168,7 +168,7 @@ label.subsection
 
 h4
 {
-  font-family:    MarketDeco;
+  font-family:    'Baloo Da 2';
   font-size:      10pt;
   color:          #333;
   margin:         0px 10px 0px 10px;
@@ -178,7 +178,7 @@ h4
 subtitle
 {
   color: #3c3c3c;
-  font-family: MarketDeco;
+  font-family: 'Baloo Da 2';
   font-size: 11pt;
   font-variant: small-caps;
   text-align: center;
@@ -188,8 +188,8 @@ subtitle
 
 p, ul, li
 {
-  font-family: Voltaire;
-  font-size:   12pt;
+  font-family: 'Abel';
+  font-size:   14pt;
   margin: 0px 10px 10px 10px;
 }
 
@@ -213,7 +213,7 @@ article a:hover
 
 navbar a
 {
-  font-family:  MarketDeco;
+  font-family:  'Baloo Da 2';
   width:        100%;
   float:        left;
   display:      block;
